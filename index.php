@@ -7,9 +7,20 @@
 require "config.php";
 require "helpers.php";
 
-//Llamar al controlador indicado
+// Library
 
-controller($_GET['url']);
+require 'library/Request.php';
 
 
-//var_dump($_GET);
+if (empty($_GET['url']))
+{
+    $url = "";
+}
+else
+{
+    $url = $_GET['url'];
+}
+
+$request = new Request($url);
+
+var_dump($request->getUrl());
