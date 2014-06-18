@@ -37,13 +37,22 @@ class View extends Response{
 
             extract($vars);
 
-            //ob_start();
+            ob_start();
 
             require "views/$template.tpl.php";
 
-            //$tpl_content = ob_get_clean();
+            $tpl_content = ob_get_clean();
 
-            //require "views/layout.tpl.php";
+            //die($tpl_content);
+            if($this->getTemplate() == 'home')
+            {
+                require "views/layout/layoutLogin.tpl.php";
+            }
+            else
+            {
+                require "views/layout/layout.tpl.php";
+            }
+
 
         });
     }

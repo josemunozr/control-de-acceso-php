@@ -1,0 +1,227 @@
+
+
+input[type=submit]
+{
+	background: #666666;
+	border:none;
+	bottom: 2em;
+	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+	color: white;
+	padding: .5em 1.5em;
+	position: absolute;
+	right: 12em;
+	
+}
+
+section form
+{
+	padding: 1em;
+}
+
+
+section .title
+{
+	margin: .5em 0;
+	text-align: center;
+}
+section .block
+{
+	display: block;
+}
+
+section .inlineBlock
+{
+	display: inline-block;
+}
+
+section .item_calendar
+{
+	text-align: center;
+}
+
+section .item_motivoVisita
+{	
+	margin: 0 0 1em 0;
+}
+section .item_motivoVisita textarea
+{
+	height: 100px;
+	width: 500px;
+}
+
+section .margin
+{
+	margin: 0 5.2em 1.5em 0;
+}
+
+section .visitanes
+{
+	position: relative;
+	width: 800px;
+}
+section .visitanes .margin-top
+{
+	margin: 1em 0;
+}
+
+
+#formAddUser
+{
+	position: relative;
+}
+#formAddUser .inicioFin
+{
+	
+	margin-top: 2em;
+}
+
+#formVisits .listaEmpresas
+{
+	display: block;
+	text-align: center;
+}
+
+#formVisits .diaVisita
+{
+	display: block;
+	text-align: center;
+	margin: 6em 0 20em 0;
+
+}
+
+#formReports .listaEmpresas
+{
+	display: block;
+	text-align: center;
+}
+
+
+.buttonSubmit 
+{
+	background: black;
+	position: absolute;
+	right: 23%;
+	
+}
+
+.bottomAdd
+{
+	background: #666666;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+	height: 30px;
+	margin-top: 1em;	
+	padding: .5em 1.5em 0 1.5em;
+	width: 120px;
+}
+.bottomAdd a
+{
+	color: white;
+}
+
+.clearForm
+{
+	background: #666666;
+	border-radius: 5px;
+	bottom: 2em;
+	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+	padding: .5em 1.5em;
+	position: absolute;
+	right: 5em;
+}
+.clearForm a
+{
+	color: white;
+}
+.dateDesde
+{
+	height: 250px;
+	margin: 0 auto;
+	width: 49%;
+	display: block;
+	text-align: center;
+}
+
+.dateHasta
+{
+	
+	height: 250px;
+	margin: 0 auto;
+	width: 49%;
+	display: block;
+	text-align: center;
+	padding-left: .6em;
+}
+.datosEmpresa
+{
+	width: 250px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 5.5em;
+}
+.datosEmpresa .item_nomEmpresa, .passUser
+{
+	margin: 0 0 1.5em 0;
+}
+.datosUser
+{
+	
+	width: 250px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 5.5em;
+}
+.datosUser .item_nomUsuario, .item_apellidoUsuario
+{
+	margin: 0 0 1.5em 0;
+}
+
+.desde_hasta
+{
+	height: 250px;
+	margin: 0 auto;
+	width: 700px;
+	padding: 5em 0;
+
+}
+
+.error
+{
+	padding-left: .5em;
+	color: yellow;
+}
+.inicioFin
+{
+	height: 250px;
+	margin: 0 auto;
+	width: 700px;
+	
+}
+.item_Visitantes label
+{
+	padding: 1em 4.5em;
+}
+
+.item_inputVisitantes input
+{
+	margin: 1em 2em 1em 0;
+}
+.dateInicio
+{
+	margin-right: 9em;
+}
+.dateFin
+{
+	margin-left: 9em;
+}
+
+.item_rutUsuario, .typePerfil
+{
+	text-align: center;	
+	margin: 0 0 1.5em 0;
+}
+
+.calendar
+{
+	display: inline;
+}

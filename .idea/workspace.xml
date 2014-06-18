@@ -23,37 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomeController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/HomeController.php">
+      <file leaf-file-name="layoutLogin.tpl.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout/layoutLogin.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="34" selection-start="306" selection-end="306" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="493">
+            <state line="10" column="20" selection-start="266" selection-end="266" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="391">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.tpl.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.tpl.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/home.tpl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="145" selection-end="148" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.tpl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layout.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="20" selection-start="120" selection-end="120" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="View.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/library/View.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="665" selection-end="665" vertical-scroll-proportion="0.5095785" vertical-offset="380" max-vertical-offset="969">
+            <state line="13" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.3134752" vertical-offset="0" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -91,21 +73,40 @@
         <option value="$PROJECT_DIR$/library/Inflector.php" />
         <option value="$PROJECT_DIR$/controllers/ContactosController.php" />
         <option value="$PROJECT_DIR$/library/Response.php" />
-        <option value="$PROJECT_DIR$/library/Request.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/helpers.php" />
         <option value="$PROJECT_DIR$/controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/library/View.php" />
+        <option value="$PROJECT_DIR$/library/Request.php" />
+        <option value="$PROJECT_DIR$/controllers/OperadoDocController.php" />
+        <option value="$PROJECT_DIR$/controllers/docOperator.tpl.php" />
+        <option value="$PROJECT_DIR$/views/layoutLogin.tpl.php" />
         <option value="$PROJECT_DIR$/views/home.tpl.php" />
+        <option value="$PROJECT_DIR$/views/DocOperator.tpl.php" />
+        <option value="$PROJECT_DIR$/controllers/DocOperatorController.php" />
+        <option value="$PROJECT_DIR$/controllers/AdministratorController.php" />
+        <option value="$PROJECT_DIR$/views/docOperator.tpl.php" />
+        <option value="$PROJECT_DIR$/views/administrator.tpl.php" />
+        <option value="$PROJECT_DIR$/views/guard.tpl.php" />
+        <option value="$PROJECT_DIR$/controllers/GuardController.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controllers/OperadorDocController.php" />
+        <option value="$PROJECT_DIR$/controllers/TecnicoController.php" />
         <option value="$PROJECT_DIR$/views/layout.tpl.php" />
+        <option value="$PROJECT_DIR$/views/operadorDoc.tpl.php" />
+        <option value="$PROJECT_DIR$/controllers/AdministradorController.php" />
+        <option value="$PROJECT_DIR$/controllers/GuardiaController.php" />
+        <option value="$PROJECT_DIR$/library/View.php" />
+        <option value="$PROJECT_DIR$/views/administrador.tpl.php" />
+        <option value="$PROJECT_DIR$/views/guardia.tpl.php" />
+        <option value="$PROJECT_DIR$/views/tecnico.tpl.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="403" />
-    <option name="width" value="683" />
-    <option name="height" value="738" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -141,76 +142,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dcaccesscontrol_PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -230,9 +161,10 @@
       <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP\views\operDoc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP\views\layout" />
       <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP\views" />
-      <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP\controllers" />
       <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP" />
+      <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP\controllers" />
       <recent name="C:\xampp\htdocs\dcaccesscontrol_PHP\views\OperDoc" />
     </key>
   </component>
@@ -262,15 +194,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="403" y="0" width="683" height="738" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3296" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23819743" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -278,7 +211,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -302,25 +234,42 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/library/View.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <folding>
-            <element signature="e#6#86#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="136">
+        <state line="12" column="5" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/operDoc/accessRequest.tpl.php">
+    <entry file="file://$PROJECT_DIR$/views/home.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="151" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="289" />
+        <state line="13" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout/layout.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="7" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="136" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
@@ -328,81 +277,133 @@
         <state line="3" column="27" selection-start="71" selection-end="71" vertical-scroll-proportion="0.07234043" vertical-offset="0" max-vertical-offset="705" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Inflector.php">
+    <entry file="file://$PROJECT_DIR$/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="357" selection-end="357" vertical-scroll-proportion="0.50524473" vertical-offset="0" max-vertical-offset="572">
+        <state line="28" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.8321678" vertical-offset="0" max-vertical-offset="578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/styleHome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="19" selection-start="280" selection-end="280" vertical-scroll-proportion="0.4651163" vertical-offset="0" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="33" selection-start="166" selection-end="166" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="47" selection-start="133" selection-end="133" vertical-scroll-proportion="0.069767445" vertical-offset="0" max-vertical-offset="731">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Response.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="73" selection-end="73" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="204">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/AccessRequestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="79" selection-end="79" vertical-scroll-proportion="0.1486014" vertical-offset="0" max-vertical-offset="572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.8321678" vertical-offset="0" max-vertical-offset="578">
+        <state line="4" column="29" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0964539" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="40" selection-start="2541" selection-end="2541" vertical-scroll-proportion="1.0157343" vertical-offset="1323" max-vertical-offset="2380">
+        <state line="106" column="41" selection-start="2423" selection-end="2423" vertical-scroll-proportion="-9.807693" vertical-offset="1547" max-vertical-offset="2380">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="269" selection-end="269" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="578">
-          <folding>
-            <element signature="e#6#86#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="306" selection-end="306" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="493">
+        <state line="27" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="527">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/styleHome.css">
+    <entry file="file://$PROJECT_DIR$/controllers/OperadorDocController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.031021899" vertical-offset="136" max-vertical-offset="2074">
+        <state line="6" column="39" selection-start="117" selection-end="117" vertical-scroll-proportion="0.14468086" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home.tpl.php">
+    <entry file="file://$PROJECT_DIR$/controllers/TecnicoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="145" selection-end="148" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="544">
+        <state line="8" column="5" selection-start="112" selection-end="112" vertical-scroll-proportion="0.1929078" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.tpl.php">
+    <entry file="file://$PROJECT_DIR$/views/layout/layout.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="120" selection-end="120" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="221">
+        <state line="17" column="13" selection-start="433" selection-end="433" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/AdministradorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="130" selection-end="130" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/GuardiaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="121" selection-end="121" vertical-scroll-proportion="0.28936172" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/tecnico.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="188" selection-end="188" vertical-scroll-proportion="0.1929078" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/operadorDoc.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/guardia.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="333" selection-end="333" vertical-scroll-proportion="0.3134752" vertical-offset="0" max-vertical-offset="705">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/administrador.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="471" selection-end="471" vertical-scroll-proportion="0.3858156" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/View.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="665" selection-end="665" vertical-scroll-proportion="0.5095785" vertical-offset="380" max-vertical-offset="969">
+        <state line="39" column="23" selection-start="689" selection-end="689" vertical-scroll-proportion="0.3617021" vertical-offset="408" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout/layoutLogin.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="266" selection-end="266" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.tpl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="535" selection-end="535" vertical-scroll-proportion="0.3134752" vertical-offset="0" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
