@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+
+html,body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	height: 100%;
+	position: relative;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+h1
+{
+	color: #085394;
+	font-size: 7em;
+	left: 0;
+	margin: 0 auto;
+	position: absolute;
+	right: 0;
+	text-shadow: rgba(0,0,0,.5) 5px 10px 20px;
+	width: 1000px;
+}
+
+footer
+{
+	bottom: 0;
+	height: 30px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	
+}
+footer p
+{
+	color: white;
+	font-size: .7em;
+	margin: 0;
+	text-align: center;
+}
+input[type=submit]
+{
+	background: #666666;
+	border-color: black;
+	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+	color: white;
+	padding: .5em 1.5em;
+	right: 7.5em;
+}
+
+.content
+{
+	background: #cccccc;
+	border: .5em solid #999999;
+	height: 100%;
+	left: 0;
+	margin: 0 auto;
+	right: 0;
+	width: 750px;
+}
+
+.form
+{
+	background: #6fa8dc;
+	border-radius: 5px;
+	border: 3.5px solid black;
+	bottom: 50%;
+	box-shadow: rgba(0,0,0,.5) 5px 10px 20px;
+	height: 60%;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 60%;
+	width: 850px;
+}
+
+.form_input
+{
+	padding: 5em;
+}
+
+.form_input input:first-child
+{
+	margin-top: 2em;
+}
+
+.form_input input:last-child
+{
+	margin-top: 2em;
+}
+
+.input
+{
+	border-radius: 5px;
+	border: 3px solid black;
+	display: block;
+	left: 0;
+	margin: 0 auto;
+	padding: .7em;
+	right: 0;
+	width: 500px;
+}
+
+.item_form
+{
+	display: inline-block;
+	position: absolute;
+}
+
+.remember
+{
+	left: 7.5em;
+}
