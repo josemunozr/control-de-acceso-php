@@ -1,4 +1,12 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Control de Acceso</title>
+    <link rel="stylesheet" href="views/css/normalize.css">
+    <link rel="stylesheet" href="views/css/styleHome.css">
+</head>
+<body>
 <h1 >DC Access Control</h1>
 <div class="content">
     <form class="form" action="#" method="post">
@@ -11,3 +19,11 @@
         </div>
         <input type="submit" class="item_form" value="Login"/>
     </form>
+
+
+    <footer>
+        <p>Powered by @jm & @da</p>
+    </footer>
+</div>
+</body>
+</html>

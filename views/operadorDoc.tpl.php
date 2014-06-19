@@ -5,7 +5,7 @@
             <li>
                 <a href="#">Usuarios</a>
                 <ul>
-                    <li><a href="modifyUser.html">Modificar</a></li>
+                    <li><a href="modifyUser">Modificar</a></li>
                     <li><a href="addUser.html">Agregar</a></li>
                 </ul>
             </li>

@@ -6,5 +6,11 @@ class OperadorDocController {
     {
         return new View('operadorDoc');
     }
+
+    public function modifyUserAction()
+    {
+        return new View('modifyUser');
+    }
+
 }
 
