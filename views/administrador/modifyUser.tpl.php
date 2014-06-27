@@ -1,17 +1,15 @@
-
 <nav>
     <ul>
-        <li><a href="<?= BASE_URL?>operadorDoc">Inicio</a></li>
+        <li><a href="../administrador">Inicio</a></li>
         <li>
             <a href="#">Usuarios</a>
             <ul>
-                <li><a href="modifyUser.html">Modificar</a></li>
-                <li><a href="addUser.html">Agregar</a></li>
+                <li><a href="#">Modificar</a></li>
+                <li><a href="../administrador/addUser">Agregar</a></li>
             </ul>
         </li>
-        <li><a href="visits.html">Visitas</a></li>
-        <li><a href="reports.html">Reportes</a></li>
-        <li><a href="accessRequest.html">Solicitud de Acceso</a></li>
+        <li><a href="../administrador/reports">Reportes</a></li>
+        <li><a href="../administrador/accessRequest">Solicitud de Acceso</a></li>
     </ul>
 </nav>
 <section>
@@ -32,13 +30,15 @@
         </div>
         <div class="inicioFin">
             <div class="dateInicio inlineBlock">
-                <label for="fechaInicio" class="block">Incio</label>
-                <input type="text" id="fechaInicio" class="calendar" required/>
+                <label for="calendar" class="block">Incio</label>
+                <input type="text" class="calendar" required/>
             </div>
             <div class="dateFin inlineBlock">
-                <label for="fechaTermino" class="block">Fin</label>
-                <input type="text" id="fechaTermino" class="calendar" required/>
+                <label for="calendar" class="block">Fin</label>
+                <input type="text" class="calendar" required/>
             </div>
         </div>
+
+
     </form>
 </section>

@@ -1,12 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sistema Control de Acceso</title>
-    <link rel="stylesheet" href="views/css/normalize.css">
-    <link rel="stylesheet" href="views/css/styleHome.css">
-</head>
-<body>
 <h1 >DC Access Control</h1>
 <div class="content">
     <form class="form" action="#" method="post">
@@ -18,12 +9,12 @@
             <p><a href="#">Recordar contraseña</a></p>
         </div>
         <input type="submit" class="item_form" value="Login"/>
+
+        <br/><br/>
+        <ul>
+            <li><a href="administrador">Administrador</a></li>
+            <li><a href="operadorDoc">Operador Doc</a></li>
+            <li><a href="tecnico">Tecnico</a></li>
+            <li><a href="guardia">Guardia</a></li>
+        </ul>
     </form>
-
-
-    <footer>
-        <p>Powered by @jm & @da</p>
-    </footer>
-</div>
-</body>
-</html>

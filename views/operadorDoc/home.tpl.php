@@ -1,17 +1,17 @@
 
     <nav>
         <ul>
-            <li><a href="home.tpl.php">Inicio</a></li>
+            <li><a href="#">Inicio</a></li>
             <li>
                 <a href="#">Usuarios</a>
                 <ul>
-                    <li><a href="<?= BASE_URL?>operadorDoc/modifyUser">Modificar</a></li>
-                    <li><a href="addUser.html">Agregar</a></li>
+                    <li><a href="operadorDoc/modifyUser">Modificar</a></li>
+                    <li><a href="operadorDoc/addUser">Agregar</a></li>
                 </ul>
             </li>
-            <li><a href="visits.html">Visitas</a></li>
-            <li><a href="reports.html">Reportes</a></li>
-            <li><a href="accessRequest.html">Solicitud de Acceso</a></li>
+            <li><a href="operadorDoc/visits">Visitas</a></li>
+            <li><a href="operadorDoc/reports">Reportes</a></li>
+            <li><a href="operadorDoc/accessRequest">Solicitud de Acceso</a></li>
         </ul>
     </nav>
     <section>

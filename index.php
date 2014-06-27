@@ -26,4 +26,4 @@ else
 
 $request = new Request($url);
 $request->execute();
-//var_dump($request->getController());
+//var_dump($request->getControllerClassName());

@@ -1,7 +1,6 @@
-
 <nav class="nav_guardia">
     <ul>
-        <li><a href="guardia">Inicio</a></li>
+        <li><a href="#">Inicio</a></li>
         <li>
             <a href="#">Visita</a>
             <input type="text" name="fecha" class="calendar">

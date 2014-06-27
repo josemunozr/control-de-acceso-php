@@ -4,24 +4,24 @@ class View extends Response{
 
     protected $template;
     protected $vars = array();
-    //protected $controller ;
+    protected $controller ;
 
-    /*public function __construct($template,$controller, $vars = array())
+    public function __construct($template,$controller, $vars = array())
     {
         $this->template = $template;
         $this->controller = $controller;
         $this->vars     = $vars;
 
     }
-    */
-    public function __construct($template, $vars = array())
+
+    /*public function __construct($template, $vars = array())
     {
         $this->template = $template;
 
         $this->vars     = $vars;
 
     }
-
+*/
 
     /**
      * @return mixed
@@ -33,12 +33,12 @@ class View extends Response{
 
     /**
      * @return mixed
-
+     * */
     public function getController()
     {
         return $this->controller;
     }
-     * */
+
 
 
     /**
@@ -52,22 +52,23 @@ class View extends Response{
     public function execute()
     {
         $template = $this->getTemplate();
-        //$controller = $this->getController();
+        $controller = $this->getController();
         $vars     = $this->getVars();
 
-        call_user_func(function() use ($template ,$vars){
+        call_user_func(function() use ($template, $controller, $vars){
 
+            //extract($controller);
             extract($vars);
 
             ob_start();
 
-            require "views/$template.tpl.php";
-            //require BASE_URL . 'views/' . $controller . '/' . $template . '.tpl.php';
+            //require "views/$template.tpl.php";
 
+              require "views/$controller/$template.tpl.php";
             $tpl_content = ob_get_clean();
 
             //die($tpl_content);
-            if($this->getTemplate() == 'home')
+            if($this->getTemplate() == 'index')
             {
                 require "views/layout/layoutLogin.tpl.php";
             }
