@@ -1,7 +1,7 @@
 
     <nav>
         <ul>
-            <li><a href="operadorDoc.tpl.php">Inicio</a></li>
+            <li><a href="home.tpl.php">Inicio</a></li>
             <li>
                 <a href="#">Usuarios</a>
                 <ul>

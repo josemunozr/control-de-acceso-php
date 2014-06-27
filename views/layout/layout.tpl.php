@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Sistema control de acceso</title>
-        <link rel="stylesheet" href="views/css/normalize.css">
-        <link rel="stylesheet" href="views/css/stylePerfil.css">
-        <link rel="stylesheet" href="views/css/styleModules.css.css">
-        <link rel="stylesheet" href="views/css/jquery-ui-1.10.4.custom.css">
+        <link rel="stylesheet" href="<?= BASE_URL?>views/layout/css/normalize.css">
+        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/stylePerfil.css'>
+        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/styleModules.css'>
+        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/jquery-ui-1.10.4.custom.css'>
+
     </head>
     <body>
     <div class="content">
@@ -26,10 +27,10 @@
 
     <!-- 	Script   -->
 
-    <script type="text/javascript" src="views/js/jquery.js"></script>
-    <script type="text/javascript" src="views/js/script.js"></script>
-    <script type="text/javascript" src="views/js/jquery.validator.Rut.js"></script>
-    <script type="text/javascript" src="views/js/jquery-ui-datepicker.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/script.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery.validator.Rut.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery-ui-datepicker.js"></script>
 
     </body>
     </html>
