@@ -4,39 +4,71 @@ class OperadorDocController {
 
     protected $nameController = "operadorDoc";
 
+    //vars index
+    protected  $nameOperator   = "Nombre operador Doc";
+    protected  $correo         = "Correo Usuario";
 
     // HOME
    public function indexAction()
     {
-            //View($template, $controlador)
-        return new View('home',$this->nameController);
+
+        return new View('home',$this->getNameController(), [
+
+            'nombre' => $this->getNameOperator(),
+            'correo' => $this->getCorreo()
+
+        ]);
     }
 
     // ACTION
     public function modifyUserAction()
     {
-        return new View('modifyUser',$this->nameController);
+        return new View('modifyUser',$this->getNameController());
     }
 
     public function accessRequestAction()
     {
-        return new View('accessRequest', $this->nameController);
+        return new View('accessRequest', $this->getNameController());
     }
 
     public function addUserAction()
     {
-        return new View('addUser', $this->nameController);
+        return new View('addUser', $this->getNameController());
     }
 
     public function visitsAction()
     {
-        return new View('visits', $this->nameController);
+        return new View('visits', $this->getNameController());
     }
 
     public function reportsAction()
     {
-        return new View('reports', $this->nameController);
+        return new View('reports', $this->getNameController());
     }
+
+
+    /*
+     * GETTER
+     */
+
+    public function getCorreo()
+    {
+        return $this->correo;
+    }
+
+
+    public function getNameController()
+    {
+        return $this->nameController;
+    }
+
+
+    public function getNameOperator()
+    {
+        return $this->nameOperator;
+    }
+
+
 
 }
 

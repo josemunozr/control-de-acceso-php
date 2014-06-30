@@ -18,7 +18,8 @@
         <div class="item_inicio">
             <hgroup>
                 <h3>Bienvenido</h3>
-                <h2>Nombre Operador Doc</h2>
+                <!--<h2>Nombre Operador Doc</h2>-->
+                <h2><?= $nombre; ?></h2>
 
             </hgroup>
         </div>
@@ -26,7 +27,8 @@
             <h3>Datos Personales</h3>
             <div class="data_person">
                 <p class="data_item"><strong>Correo :</strong></p>
-                <p class="data_item">Correo Usuario</p>
+                <!--<p class="data_item">Correo Usuario</p>-->
+                <p class="data_item"><?= $correo; ?></p>
             </div>
     </section>
 

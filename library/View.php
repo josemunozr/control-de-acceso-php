@@ -57,7 +57,6 @@ class View extends Response{
 
         call_user_func(function() use ($template, $controller, $vars){
 
-            //extract($controller);
             extract($vars);
 
             ob_start();
@@ -67,7 +66,6 @@ class View extends Response{
               require "views/$controller/$template.tpl.php";
             $tpl_content = ob_get_clean();
 
-            //die($tpl_content);
             if($this->getTemplate() == 'index')
             {
                 require "views/layout/layoutLogin.tpl.php";
