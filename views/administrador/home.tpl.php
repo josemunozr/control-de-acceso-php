@@ -23,7 +23,6 @@
         <h3>Datos Personales</h3>
         <div class="data_company">
             <p class="data_item"><strong>Empresa :</strong></p>
-            
             <p class="data_item"><?= $empresa; ?></p>
         </div>
         <div class="data_person">
