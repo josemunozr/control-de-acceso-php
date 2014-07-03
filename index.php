@@ -29,6 +29,6 @@
 
     $request = new Request($url);
     $request->execute();
-   //var_dump($request->getControllerClassName());
+
     //$con = new Database();
     //var_dump($con);

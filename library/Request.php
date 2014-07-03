@@ -49,7 +49,10 @@ class Request{
     {
         $this->params = $segments;
     }
-      public function getUrl()
+
+
+
+    public function getUrl()
     {
         return $this->url;
 
@@ -71,6 +74,7 @@ class Request{
     }
 
 
+
     public function getAction()
     {
         return $this->action;
@@ -85,6 +89,8 @@ class Request{
     {
         return $this->params;
     }
+
+
 
     public function execute()
     {

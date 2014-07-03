@@ -8,12 +8,11 @@
 
 class Model {
 
-    protected $db;
+    protected $_db;
 
     public function __construct()
     {
-
-    $this->db = new Database();
+        $this->_db = new Database();
 
     }
 

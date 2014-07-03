@@ -14,36 +14,16 @@ class View extends Response{
 
     }
 
-    /*public function __construct($template, $vars = array())
-    {
-        $this->template = $template;
-
-        $this->vars     = $vars;
-
-    }
-*/
-
-    /**
-     * @return mixed
-     */
     public function getTemplate()
     {
         return $this->template;
     }
 
-    /**
-     * @return mixed
-     * */
     public function getController()
     {
         return $this->controller;
     }
 
-
-
-    /**
-     * @return array
-     */
     public function getVars()
     {
         return $this->vars;
@@ -61,9 +41,8 @@ class View extends Response{
 
             ob_start();
 
-            //require "views/$template.tpl.php";
 
-              require "views/$controller/$template.tpl.php";
+            require "views/$controller/$template.tpl.php";
             $tpl_content = ob_get_clean();
 
             if($this->getTemplate() == 'index')
