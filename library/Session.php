@@ -8,7 +8,7 @@
 
 class Session {
 
-   public static function  init()
+   public static function  start()
    {
        session_start();
    }

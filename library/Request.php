@@ -73,6 +73,10 @@ class Request{
         return 'controllers/' . $this->getControllerClassName() . '.php';
     }
 
+    public function getModels()
+    {
+        return 'models/AccessControll.php';
+    }
 
 
     public function getAction()
@@ -109,6 +113,7 @@ class Request{
         $controller = new $controllerClassName();
 
         $response = call_user_func_array([$controller, $actionMethodName], $params);
+        $other = call_user_func_array([]);
 
         if($response instanceof Response)
         {
@@ -116,7 +121,8 @@ class Request{
         }
         else
         {
-            exit('Respuesta no Valida');
+            $this->executeResponse($response);
+            //exit('Respuesta no Valida');
         }
 
     }

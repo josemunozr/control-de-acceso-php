@@ -14,6 +14,7 @@ class View extends Response{
 
     }
 
+
     public function getTemplate()
     {
         return $this->template;
