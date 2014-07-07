@@ -1,20 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jarmuñoz
- * Date: 02-07-14
- * Time: 11:01 AM
- */
 
-class Database extends PDO {
+$DB_HOST = "localhost";
+$DB_USER = "root";
+$DB_PASS = "";
+$DB_NAME = "mvc";
 
-    public function __construct() {
 
-        parent::__construct(
-            'mysql:host=' . DB_HOST .
-            ';dbname=' . DB_NAME,
-            DB_USER,
-            DB_PASS);
-
-    }
-}
+$con = mysql_connect($DB_HOST,$DB_USER,$DB_PASS)
+or die("error en server");
+mysql_select_db($DB_NAME, $con);

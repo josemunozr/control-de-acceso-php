@@ -9,9 +9,6 @@ class HomeController {
           return new View('index', $this->nameController);
     }
 
-    public function errorAction()
-    {
-        return new View('error', $this->nameController);
-    }
+
 
 }

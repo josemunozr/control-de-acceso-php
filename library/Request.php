@@ -113,7 +113,7 @@ class Request{
         $controller = new $controllerClassName();
 
         $response = call_user_func_array([$controller, $actionMethodName], $params);
-        $other = call_user_func_array([]);
+
 
         if($response instanceof Response)
         {
@@ -141,6 +141,7 @@ class Request{
         {
             echo json_encode($response);
         }
+
 
     }
 

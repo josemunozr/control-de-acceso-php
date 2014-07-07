@@ -1,9 +1,12 @@
-    <!doctype html>
+<?php
+require_once 'models/seguridadAcceso.php';
+?>
+<!doctype html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Sistema control de acceso</title>
-        <link rel="stylesheet" href="<?= BASE_URL?>views/layout/css/normalize.css">
+        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/normalize.css'>
         <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/stylePerfil.css'>
         <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/styleModules.css'>
         <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/jquery-ui-1.10.4.custom.css'>
@@ -14,7 +17,7 @@
         <header>
             <h1>Sistema control de acceso</h1>
             <div class="logout_button">
-                <a href="#"><p>Logout</p></a>
+                <a href="<?= BASE_URL?>models/logout.php"><p>Logout</p></a>
             </div>
         </header>
 

@@ -12,6 +12,7 @@ class AdministradorController {
     //HOME
     public function indexAction()
     {
+
         return new View('home', $this->getNameController(),[
 
             'nombre' => $this->getName(),

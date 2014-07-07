@@ -14,9 +14,8 @@
     require 'library/Response.php';
     require 'library/View.php';
 
-    require 'library/Database.php';
-    require 'library/Model.php';
-    require 'library/Session.php';
+
+
 
     if (empty($_GET['url']))
     {
