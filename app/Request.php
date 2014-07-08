@@ -73,12 +73,6 @@ class Request{
         return 'controllers/' . $this->getControllerClassName() . '.php';
     }
 
-    public function getModels()
-    {
-        return 'models/AccessControll.php';
-    }
-
-
     public function getAction()
     {
         return $this->action;

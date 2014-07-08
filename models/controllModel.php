@@ -29,4 +29,5 @@ class ControllModel extends Model {
         $sql = $sql_perfil->fetchAll();
         return $sql;
     }
+
 }

@@ -1,6 +1,6 @@
 <?php
 
-class AdministradorController {
+class AdministradorController extends BaseController {
 
     protected $nameController = "administrador";
 

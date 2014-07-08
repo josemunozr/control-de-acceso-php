@@ -1,6 +1,6 @@
 <?php
 
-class TecnicoController {
+class TecnicoController extends BaseController {
 
     protected $nameController = "tecnico";
 

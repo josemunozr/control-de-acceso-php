@@ -3,7 +3,7 @@
 // FRONTEND CONTROLLER
 
     require "config.php";
-    //require "helpers.php";
+
 
     // Library
     require 'app/Request.php';
@@ -11,9 +11,8 @@
     require 'app/Response.php';
     require 'app/View.php';
     require 'app/Model.php';
-    require 'app/Db.php';
+    require 'app/Database.php';
     require 'app/BaseController.php';
-
 
     if (empty($_GET['url']))
     {

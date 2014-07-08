@@ -1,6 +1,6 @@
 <?php
 
-class GuardiaController {
+class GuardiaController extends BaseController {
 
     protected $nameController = "guardia";
 

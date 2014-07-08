@@ -1,6 +1,6 @@
 <?php
 
-class OperadorDocController {
+class OperadorDocController extends BaseController {
 
     protected $nameController = "operadorDoc";
 
@@ -56,12 +56,10 @@ class OperadorDocController {
         return $this->correo;
     }
 
-
     public function getNameController()
     {
         return $this->nameController;
     }
-
 
     public function getNameOperator()
     {
