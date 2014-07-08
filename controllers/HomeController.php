@@ -1,6 +1,6 @@
 <?php
 
-class HomeController {
+class HomeController extends BaseController {
 
     protected $nameController = "home";
 

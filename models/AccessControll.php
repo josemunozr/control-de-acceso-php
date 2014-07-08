@@ -1,6 +1,6 @@
 <?php
 
-require '../library/Database.php';
+require '../app/Database.php';
 
         $sql_usu = "
                     SELECT id_user,pass_user FROM tabla_user

@@ -10,20 +10,23 @@ class ControllModel extends Model {
     public function getUser($usuario, $pass)
     {
 
-        $sql_user = $this->_db->query("SELECT id_user,pass_user FROM tabla_user
-                                    WHERE id_user = $usuario
-                                    AND   pass_user  = $pass");
+        $sql_user = $this->_db->prepare("SELECT id_user,pass_user FROM tabla_user
+                                    WHERE id_user = '$usuario'
+                                    AND   pass_user  = '$pass'");
+        $sql_user->execute();
+        $sql = $sql_user->fetchAll();
 
-        return $sql_user->fetchall();
-
+        return $sql;
     }
 
     public function getPerfil($usuario, $pass)
     {
-         $sql_perfil = $this->_db->query("SELECT tipo_perfil FROM tabla_user
-                                         WHERE id_user = $usuario
-                                         AND   pass_user  = $pass");
+         $sql_perfil = $this->_db->prepare("SELECT tipo_perfil FROM tabla_user
+                                         WHERE id_user = '$usuario'
+                                         AND   pass_user  = '$pass'");
 
-        return $sql_perfil->fetch();
+        $sql_perfil->execute();
+        $sql = $sql_perfil->fetchAll();
+        return $sql;
     }
 }

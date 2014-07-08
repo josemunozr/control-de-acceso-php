@@ -1,20 +1,18 @@
 <?php
-/*
- * El frontend controllers se encarga de
- * configurar nuestra aplicacion
- */
+
+// FRONTEND CONTROLLER
 
     require "config.php";
     //require "helpers.php";
 
     // Library
-
-    require 'library/Request.php';
-    require 'library/Inflector.php';
-    require 'library/Response.php';
-    require 'library/View.php';
-
-
+    require 'app/Request.php';
+    require 'app/Inflector.php';
+    require 'app/Response.php';
+    require 'app/View.php';
+    require 'app/Model.php';
+    require 'app/Db.php';
+    require 'app/BaseController.php';
 
 
     if (empty($_GET['url']))

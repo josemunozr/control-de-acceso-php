@@ -1,6 +1,8 @@
 <?php
 
-class BaseController {
+abstract class BaseController {
+
+    abstract function indexAction();
 
     protected  function loadModels($model)
     {
