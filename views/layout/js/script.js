@@ -68,7 +68,7 @@ function colorNav(){
 			$('nav ul li a').css("color","black");
 		},
 		function(){
-			$('nav ul li a').css("color","white");	
+			$('nav ul li a').css("color","white");
 		}
 	);
 }
@@ -111,7 +111,7 @@ $('.diaVisita .calendar').datepicker();
 	dropdown();
 	clearInput();
 	addUser();
-	colorNav();
+	//colorNav();
 	validacionRut();
 
 

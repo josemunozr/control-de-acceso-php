@@ -4,7 +4,7 @@
 <div id="content">
     <form id="form" action="Control" method="post">
         <label for="usuario">Usuario</label>
-        <input type="text" name="usuario" required/>
+        <input type="text" name="usuario" placeholder="12.345.678-9" required/>
         <label for="pass">Contraseña</label>
         <input type="password" name="pass" required/>
         <input type="submit" value="login" />

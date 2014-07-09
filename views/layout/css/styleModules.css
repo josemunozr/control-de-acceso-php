@@ -2,11 +2,14 @@
 
 input[type=submit]
 {
-	background: #666666;
-	border:none;
+
 	bottom: 2em;
-	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
-	color: white;
+    background: rgba(208, 46, 16, 0.9);
+    box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+    text-shadow: 0 1px black;
+    color: white;
+    border-radius: 5px;
+    border:0;
 	padding: .5em 1.5em;
 	position: absolute;
 	right: 12em;
@@ -106,9 +109,10 @@ section .visitanes .margin-top
 
 .bottomAdd
 {
-	background: #666666;
-	border-radius: 5px;
-	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+    background: rgba(208, 46, 16, 0.9);
+    box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+    text-shadow: 0 1px black;
+    border-radius: 5px;
 	height: 30px;
 	margin-top: 1em;	
 	padding: .5em 1.5em 0 1.5em;
@@ -121,10 +125,11 @@ section .visitanes .margin-top
 
 .clearForm
 {
-	background: #666666;
-	border-radius: 5px;
+    background: rgba(208, 46, 16, 0.9);
+    box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+    text-shadow: 0 1px black;
+    border-radius: 5px;
 	bottom: 2em;
-	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
 	padding: .5em 1.5em;
 	position: absolute;
 	right: 5em;

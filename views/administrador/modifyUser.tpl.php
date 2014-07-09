@@ -17,7 +17,7 @@
     <form id="formModifyUser" action="#" method="post">
         <div class="item_rutUsuario">
             <label for="rutUsuario" class="block">Rut de Usuario</label>
-            <input type="text" id="rutUsuario" required/>
+            <input type="text" id="rutUsuario" placeholder="12.345.678-9" required/>
         </div>
         <div class="typePerfil">
             <label for="tipoPerfil" class="block ">Tipo de Perfil</label>
@@ -31,11 +31,11 @@
         <div class="inicioFin">
             <div class="dateInicio inlineBlock">
                 <label for="calendar" class="block">Incio</label>
-                <input type="text" class="calendar" required/>
+                <input type="text" title="Inicio vigencia Perfil" class="calendar" placeholder="Inicio vigencia Perfil" required/>
             </div>
             <div class="dateFin inlineBlock">
                 <label for="calendar" class="block">Fin</label>
-                <input type="text" class="calendar" required/>
+                <input type="text" title="Fin vigencia Perfil" class="calendar" placeholder="Fin vigencia Perfil" required/>
             </div>
         </div>
 

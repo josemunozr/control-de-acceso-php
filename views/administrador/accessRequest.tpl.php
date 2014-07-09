@@ -47,12 +47,12 @@
             <div class="item_inputVisitantes">
                 <input type="text" id="nombreUsuario" required/>
                 <input type="text" id="apellidoUsuario" required/>
-                <input type="text" id="rutUsuario" required/>
+                <input type="text" id="rutUsuario" placeholder="12.345.678-9" required/>
 
                 <div class="item_addInput">
                     <input type="text" id="nombreUsuario" required/>
                     <input type="text" id="apellidoUsuario" required/>
-                    <input type="text" id="rutUsuario" required/>
+                    <input type="text" id="rutUsuario" placeholder="12.345.678-9" required/>
                 </div>
 
             </div>

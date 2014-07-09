@@ -26,11 +26,11 @@
         </div>
         <div class="desde_hasta">
             <div class="dateDesde inlineBlock">
-                <label for="dateDesde" class="block">Incio</label>
+                <label for="dateDesde" class="block">Desde</label>
                 <input type="text" id="dateDesde" class="calendar" required/>
             </div>
             <div class="dateHasta inlineBlock">
-                <label for="fechaHasta" class="block">Fin</label>
+                <label for="fechaHasta" class="block">Hasta</label>
                 <input type="text" id="fechaHasta" class="calendar" required/>
             </div>
         </div>
