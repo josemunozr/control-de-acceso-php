@@ -1,13 +1,16 @@
-<h1 >DC Access Control</h1>
-<div class="content">
-   <!--  <form class="form" action="models/AccessControll.php" method="post"> -->
-    <form class="form" action="Control" method="post">
-        <div class="form_input">
-            <input type="text" class="input" name="usuario" placeholder="Usuario..."required/>
-            <input type="password" class="input" name="pass" placeholder="Contraseña..." required/>
-        </div>
-        <div class="remember item_form">
-            <p><a href="#">Recordar contraseña</a></p>
-        </div>
-        <input type="submit" class="item_form" value="Login"/>
+<hgroup>
+    <h1>DC Access Control</h1>
+</hgroup>
+<div id="content">
+    <form id="form" action="Control" method="post">
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" required/>
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" required/>
+        <input type="submit" value="login" />
     </form>
+    <figure id="img">
+        <img src="<?= BASE_URL?>views/layout/css/images/banner.png" alt="DC Access Control">
+    </figure>
+    <p id="remember_pass"><a href="#">Recordar Password</a></p>
+</div>

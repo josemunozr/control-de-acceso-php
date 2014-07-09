@@ -1,117 +1,122 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600);
 html,body
 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	height: 100%;
-	position: relative;
+    background: #eee;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
 }
 
-a
+
+footer
 {
-	text-decoration: none;
+    bottom: 0;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+footer p
+{
+    color: white;
+    font-size: .7em;
+    margin: 0;
+    text-shadow: rgba(0,0,0,.6) 3px 3px 5px;
+
+}
+hgroup
+{
+
+    background: linear-gradient(0deg, #202020 0%,#444444 100%);
+    border-bottom: 1.5px solid #999;
+    border-right: 1.5px solid #999;
+    border-top: 1.5px solid #999;
+    box-shadow: rgba(0,0,0,.6) 3px 3px 5px;
+    color: white;
+    height: 50px;
+    margin: 2em 0;
+    width: 360px;
 }
 
 h1
 {
-	color: #085394;
-	font-size: 7em;
-	left: 0;
-	margin: 0 auto;
-	position: absolute;
-	right: 0;
-	text-shadow: rgba(0,0,0,.5) 5px 10px 20px;
-	width: 1000px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0.5em 1em;
+    text-align: right;
 }
 
-footer
+input
 {
-	bottom: 0;
-	height: 30px;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	
-}
-footer p
-{
-	color: white;
-	font-size: .7em;
-	margin: 0;
-	text-align: center;
+    color: #666;
+    display: block;
+    height: 25px;
+    margin: auto;
+    width: 160px;
 }
 input[type=submit]
 {
-	background: #666666;
-	border-color: black;
-	box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
-	color: white;
-	padding: .5em 1.5em;
-	right: 7.5em;
+    background: rgba(208, 46, 16, 0.9);
+    border-radius: 2px;
+    border:0;
+    bottom: -40px;
+    text-shadow: 0 1px black;
+    color: white;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    width: 60px;
+}
+label
+{
+    display: block;
+    font-size: 14px;
+    margin: 0.7em 0;
+    padding-left: 5em;
 }
 
-.content
+#content
 {
-	background: #cccccc;
-	border: .5em solid #999999;
-	height: 100%;
-	left: 0;
-	margin: 0 auto;
-	right: 0;
-	width: 750px;
+    display: inline-block;
+    width: 100%;
 }
 
-.form
+#form
 {
-	background: #6fa8dc;
-	border-radius: 5px;
-	border: 3.5px solid black;
-	bottom: 50%;
-	box-shadow: rgba(0,0,0,.5) 5px 10px 20px;
-	height: 60%;
-	left: 0;
-	margin: auto;
-	position: absolute;
-	right: 0;
-	top: 60%;
-	width: 850px;
+    background: linear-gradient(0deg, #202020 0%,#444444 100%);
+    border: 2px solid black;
+    color: white;
+    display: inline-block;
+    height: 175px;
+    margin-left: 2.5em;
+    position: relative;
+    width: 360px;
 }
 
-.form_input
+#img
 {
-	padding: 5em;
+    display: inline-block;
+    float: right;
+    margin-right: 2.5em;
+    margin-top: 0;
+    border: 2px solid black;
+}
+#img img
+{
+    height: 325px;
+    margin: 1px 1px 0 1px;
+    width: 795px;
 }
 
-.form_input input:first-child
+#remember_pass
 {
-	margin-top: 2em;
+    font-size: 14px;
+    margin-left: 3.5em;
 }
 
-.form_input input:last-child
+#remember_pass a
 {
-	margin-top: 2em;
-}
+    color: #3481b7 !important;
+    text-decoration: none;
 
-.input
-{
-	border-radius: 5px;
-	border: 3px solid black;
-	display: block;
-	left: 0;
-	margin: 0 auto;
-	padding: .7em;
-	right: 0;
-	width: 500px;
-}
-
-.item_form
-{
-	display: inline-block;
-	position: absolute;
-}
-
-.remember
-{
-	left: 7.5em;
 }
