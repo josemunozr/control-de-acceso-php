@@ -18,6 +18,7 @@ require 'models/app/seguridadAcceso.php';
             <h1>Sistema control de acceso</h1>
             <div class="logout_button">
                 <a href="<?= BASE_URL?>models/app/logout.php"><p>Logout</p></a>
+                <!-- <a href="Control/logout"><p>Logout</p></a> -->
             </div>
         </header>
 

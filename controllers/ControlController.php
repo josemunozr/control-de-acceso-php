@@ -16,30 +16,55 @@ class  ControlController extends BaseController {
 
     public function indexAction()
     {
-        $session = $this->model->getUser($this->user, $this->pass);
-        $perfil  = $this->model->getPerfil($this->user, $this->pass);
+        $user = $this->user;
+        $pass = $this->pass;
 
 
-        if($this->user == $session[0]['id_user'])
+        $getUser = $this->model->getUser($user);
+        $validatePass = $this->model->validatePass($user, $pass);
+        $validateUser = $this->model->validateUser($user, $pass);
+        $getPerfil  = $this->model->getPerfil($user);
+
+
+        if($validateUser != 0) // Se valida si existe el usuario
         {
 
-            session_name("loginUsuario");
-            session_start();
-            $_SESSION["autentificado"]= "SI";
-            $_SESSION["ultimoAcceso"] = date("Y-n-j H:i:s");
+            if($validatePass != 0) // Se valida si la clave de usuario existe o es correcta
+            {
+                $perfil =  $getPerfil['tipo_perfil'];
 
-           // header ("Location: operadorDoc");
-            $type = $perfil[0]['tipo_perfil'];
-            header ("Location: $type");
+                session_name($perfil);
+                session_start();
+                $_SESSION["autentificado"] = "SI";
+                $_SESSION["usuarioActual"] =  $getUser['id_user'];
+                $_SESSION["ultimoAcceso"] = date("Y-n-j H:i:s");
+
+
+
+
+                header ("Location: $perfil");
+            }
+            else
+            {
+                echo "<script>alert('Contrase\u00f1a Incorrecta')</script>";
+            }
         }
         else
         {
-
-            header("Location: index.php?errorUsuario=true");
+            echo "<script>alert('Usuario Ingresado No existe')</script>";
         }
+
     }
 
 
+    public function logoutAction()
+    {
+
+        session_start();
+        session_destroy();
+
+        header("Location: ../../ ");
+    }
 
 
 

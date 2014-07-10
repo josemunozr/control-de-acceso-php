@@ -1,13 +1,19 @@
 <?php
+
+$url = $_GET['url'];
 $root = BASE_URL;
 
-session_name("loginUsuario");
+$request = new Request($url);
+$session_name = $request->getController();
+
+session_name($session_name);
 session_start();
+
 
 if ($_SESSION["autentificado"] != "SI") {
 
     header("Location: $root");
-
+    exit();
 
 } else {
 
@@ -21,6 +27,7 @@ if ($_SESSION["autentificado"] != "SI") {
         session_destroy();
 
         header("Location: $root");
+
     }else {
         $_SESSION["ultimoAcceso"] = $ahora;
     }
