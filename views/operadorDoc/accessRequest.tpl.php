@@ -27,7 +27,7 @@
             </div>
             <div class="item_calendar inlineBlock margin">
                 <label for="date" class="block"	>Día Visita</label>
-                <input type="text" id="date" class="calendar" requierd/>
+
             </div>
             <div class="item_motivoVisita ">
                 <label for="motivoVisita" class="block">Motivo Visita</label>

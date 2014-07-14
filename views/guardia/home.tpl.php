@@ -1,12 +1,12 @@
 <nav class="nav_guardia">
     <ul>
         <li><a href="#">Inicio</a></li>
-        <li>
-            <a href="#">Visita</a>
-            <input type="text" name="fecha" class="calendar">
-            <input type="button" value="Solicitar" />
-        </li>
+        <form id="calendarGuardia" action="#" method="post">
+            <div id="calendarVisits" title="Lista de visitantes por día">Visitas</div>
+            <input type="submit" value="Consutar"/>
+        </form>
     </ul>
+
 </nav>
 <section>
     <div class="item_inicio">

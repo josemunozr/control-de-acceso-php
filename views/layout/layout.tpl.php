@@ -7,9 +7,10 @@ require 'models/app/seguridadAcceso.php';
         <meta charset="UTF-8">
         <title>Sistema control de acceso</title>
         <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/normalize.css'>
-        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/stylePerfil.css'>
+        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/stylePerfil.css' id="linkStylePerfil">
+        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/jquery-ui.css'>
         <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/styleModules.css'>
-        <link rel="stylesheet" href='<?= BASE_URL?>views/layout/css/jquery-ui-1.10.4.custom.css'>
+
 
     </head>
     <body>
@@ -24,17 +25,19 @@ require 'models/app/seguridadAcceso.php';
 
             <?= $tpl_content; ?>
 
-    <footer>
-        <p>Powered by @jm & @da</p>
-    </footer>
+        <footer>
+            <p>Powered by @jm & @da</p>
+        </footer>
+
     </div>
+
 
     <!-- 	Script   -->
 
     <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery.js"></script>
     <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/script.js"></script>
     <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery.validator.Rut.js"></script>
-    <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery-ui-datepicker.js"></script>
+    <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery-ui.js"></script>
 
     </body>
     </html>

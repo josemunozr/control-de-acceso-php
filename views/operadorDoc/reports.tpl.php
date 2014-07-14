@@ -25,14 +25,8 @@
             </select>
         </div>
         <div class="desde_hasta">
-            <div class="dateDesde inlineBlock">
-                <label for="dateDesde" class="block">Desde</label>
-                <input type="text" id="dateDesde" class="calendar" required/>
-            </div>
-            <div class="dateHasta inlineBlock">
-                <label for="fechaHasta" class="block">Hasta</label>
-                <input type="text" id="fechaHasta" class="calendar" required/>
-            </div>
+            <div id="reportDesde" title="Reporte Desde: " >Desde</div>
+            <div id="reportHasta" title="Reporte Hasta: ">Hasta</div>
         </div>
         <div class="buttonSubmit">
             <input type="submit"  value="Generar">

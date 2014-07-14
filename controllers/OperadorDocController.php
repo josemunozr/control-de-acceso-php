@@ -41,6 +41,11 @@ class OperadorDocController extends BaseController {
         return new View('visits', $this->getNameController());
     }
 
+    public function viewVisitsAction()
+    {
+        return new View('viewVisits',$this->getNameController() );
+    }
+
     public function reportsAction()
     {
         return new View('reports', $this->getNameController());

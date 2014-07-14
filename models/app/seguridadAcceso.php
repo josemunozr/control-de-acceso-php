@@ -1,21 +1,18 @@
 <?php
 
-$url = $_GET['url'];
+
+
 $root = BASE_URL;
 
-$request = new Request($url);
-$session_name = $request->getController();
-
-session_name($session_name);
 session_start();
-
 
 if ($_SESSION["autentificado"] != "SI") {
 
     header("Location: $root");
     exit();
 
-} else {
+}
+else{
 
     $fechaGuardada = $_SESSION["ultimoAcceso"];
     $ahora = date("Y-n-j H:i:s");

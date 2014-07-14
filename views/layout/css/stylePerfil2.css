@@ -1,0 +1,238 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700,600');
+
+
+html,body
+{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    height: 100%;
+    position: relative;
+    background: #eee;
+}
+a
+{
+    text-decoration: none;
+}
+
+footer
+{
+    bottom: 0;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+
+}
+footer p
+{
+
+    color: white;
+    font-size: .7em;
+    margin: 0;
+    text-shadow: rgba(0,0,0,.6) 3px 3px 5px;
+    text-align: center;
+}
+
+h1
+{
+    padding: .5em 2em;
+
+}
+h1, h2, h3, p
+{
+    margin: 0;
+
+}
+header
+{
+    border: 1px solid black;
+    height: 90px;
+    position: relative;
+    background: linear-gradient(0deg, #202020 0%,#444444 100%);
+    color: white;
+    text-shadow: black 2px 2px 2px;
+
+}
+header .logout_button
+{
+    background: rgba(208, 46, 16, 0.9);
+    border-color: black;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+    height: 30px;
+    padding: .5em 1.5em 0 1.5em;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 50px;
+
+}
+header .logout_button p
+{
+    color: white;
+}
+
+input, textarea, select
+{
+    border-radius: 5px;
+    color: dimgrey;
+
+}
+
+ul li ul
+{
+    display: none;
+
+}
+
+ul li ul li:hover
+{
+    background: linear-gradient(0deg, #202020 0%,#444444 100%);
+
+}
+
+nav
+{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid black;
+    display: inline-block;
+    position: fixed;
+    top: 150px;
+    background: linear-gradient(0deg, #202020 0%,#444444 100%);
+
+
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li
+{
+    border-top: 1px solid grey;
+    padding: .5em .3em;
+}
+
+nav ul li:hover
+{
+    background: #D02E10; /*#6fa8dc;*/
+    text-shadow: 0 1px black;
+
+}
+
+
+nav ul li a
+{
+    color: white;
+    /*padding-right: 2em;*/
+
+}
+
+section
+{
+    border-radius: 10px;
+    border: 2px dashed darkseagreen;
+    box-shadow: rgba(0,0,0, .5) 5px 10px 20px;
+    left: 18%;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 120px;
+    width: 900px;
+    background: linear-gradient(0deg, #fff 0%,#eee 100%);
+    color: #000000;
+}
+
+#calendarGuardia
+{
+    border-top:1px solid gray;
+    text-align: center;
+    height: 250px;
+}
+
+#calendarGuardia #calendarVisits
+{
+    color: #ffffff;
+    display: inline-block;
+}
+
+.active
+{
+    background: rgba(208, 46, 16, 0.9);
+}
+
+.content
+{
+    border-left: 1px dotted #eee;
+    border-right:  1px dotted #eee;
+    height: 200%;
+    left: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 1200px;
+    background: linear-gradient(0deg, #eee 0%,#fff 100%);
+}
+
+
+
+.data_item
+{
+    display: inline-block;
+}
+
+.data_company p
+{
+    padding-right: 3em;
+}
+
+.data_person
+{
+    padding: 2em 0;
+}
+.data_person p
+{
+    padding-right: 3.9em;
+}
+
+.item_inicio
+{
+    text-align: center;
+}
+
+.item_inicio h3, h2
+{
+    padding-top: 1em;
+}
+
+.personal_data
+{
+    padding: 2em 0 1em 8em;
+
+}
+.personal_data h3
+{
+    padding-bottom: 3em;
+}
+
+.nav_guardia
+{
+    width: 235px;
+    text-align: center;
+    display: i;
+}
+.nav_guardia input[type=submit]
+{
+    background: rgba(208, 46, 16, 0.9);
+    box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
+    text-shadow: 0 1px black;
+    color: white;
+    border-radius: 5px;
+    border:0;
+    bottom: 1em;
+    text-align: center;
+
+}
+

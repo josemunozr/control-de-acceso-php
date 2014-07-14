@@ -12,6 +12,7 @@ class  ControlController extends BaseController {
         $this->model = $this->loadModels('controll');
         $this->user = $_POST['usuario'];
         $this->pass = $_POST['pass'];
+
     }
 
     public function indexAction()
@@ -32,9 +33,10 @@ class  ControlController extends BaseController {
             if($validatePass != 0) // Se valida si la clave de usuario existe o es correcta
             {
                 $perfil =  $getPerfil['tipo_perfil'];
+                $user =  $getUser['id_user'];
 
-                session_name($perfil);
                 session_start();
+                $_SESSION["name"] = $user;
                 $_SESSION["autentificado"] = "SI";
                 $_SESSION["usuarioActual"] =  $getUser['id_user'];
                 $_SESSION["ultimoAcceso"] = date("Y-n-j H:i:s");
@@ -55,6 +57,8 @@ class  ControlController extends BaseController {
         }
 
     }
+
+
 
 
     public function logoutAction()

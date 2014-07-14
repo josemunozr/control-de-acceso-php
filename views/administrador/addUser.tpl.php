@@ -18,7 +18,7 @@
         <div class="datosUser">
             <div class="item_rutUsuario inlineBlock">
                 <label for="rutUsuario" class="block">Rut Usuario</label>
-                <input type="text" id="rutUsuario"placeholder="12.345.678-9" required/>
+                <input type="text" id="rutUsuario" placeholder="12.345.678-9" required/>
             </div>
             <div class="item_nomUsuario inlineBlock">
                 <label for="nombreUsuario" class="block">Nombre</label>
@@ -49,13 +49,13 @@
             </div>
         </div>
         <div class="inicioFin">
-            <div class="dateInicio inlineBlock">
+            <div class="dateInicio inlineBlock" title="Inicio vigencia perfil">
                 <label for="fechaInicio" class="block">Incio</label>
-                <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" placeholder="Inicio vigencia perfil" required/>
+               <!-- <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" placeholder="Inicio vigencia perfil" required/>-->
             </div>
-            <div class="dateFin inlineBlock">
+            <div class="dateFin inlineBlock" title="Fin vigencia perfil">
                 <label for="fechaTermino" class="block">Fin</label>
-                <input type="text" id="fechaTermino" class="calendar" title="Fin vigencia perfil" placeholder="Fin vigencia perfil" required/>
+                <!--<input type="text" id="fechaTermino" class="calendar" title="Fin vigencia perfil" placeholder="Fin vigencia perfil" required/>-->
             </div>
         </div>
         <div class="buttonSubmit">

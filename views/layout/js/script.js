@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-	
-console.log("todo ok");
-
 function dropdown(){
 
 	$('ul li:has(ul)').hover(
@@ -36,7 +33,7 @@ function clearInput(){
 		// clear input Clone
 		$('.clone').remove();
 
-		$('.content').css("height", "120%");
+		$('.content').css("height", "140%");
 
 	});
 
@@ -58,19 +55,6 @@ function addUser(){
 		$('.content').css("height", "+=70%");
 
 	});
-}
-
-function colorNav(){
-
-	$('nav ul li').hover(
-
-		function(){
-			$('nav ul li a').css("color","black");
-		},
-		function(){
-			$('nav ul li a').css("color","white");
-		}
-	);
 }
 
 function validacionRut(){
@@ -97,22 +81,81 @@ function validacionRut(){
 		format_on: 'keyup'
 	});
 
+    $('.modified_rutUsuario #rutUsuario')
+     .Rut({
+            format_on: 'keyup',
+            on_error: function(){
+                alert("rut Invalido");
+            }
+     });
+
 }
 
 
-$('.nav_guardia .calendar').datepicker();
-$('.inicioFin .calendar').datepicker();
-$('.desde_hasta .calendar').datepicker();
-$('.item_calendar .calendar').datepicker();
-$('.diaVisita .calendar').datepicker();
+
+function displayItem(){
+    var type = $(this).val();
+
+    if(type == "Rut")
+    {
+        $(".item_NomAppe").css({ display: "none"});
+        $(".modified_rutUsuario").css({ display: "block"});
+
+    }else if(type == "NomApe")
+    {
+
+       $(".modified_rutUsuario").css({ display: "none"});
+       $(".item_NomAppe").css({ display: "block"});
 
 
+    }else if(type == "")
+    {
+      $(".modified_rutUsuario").css({ display: "none"});
+      $(".item_NomAppe").css({ display: "none"});
+
+    }
+
+}
+
+    function activateMenu(e)
+    {
+       links.removeClass("active");
+        var elementActive = $(this);
+        elementActive.addClass('active');
+        //e.preventDefault();
+    }
+
+
+
+    $('.item_calendar').datepicker();
+    $('.dateInicio').datepicker();
+    $('.dateFin').datepicker();
+    $('.dateDesde').datepicker();
+    $('.dateHasta').datepicker();
+    $('.diaVisita').datepicker();
+    $('#reportDesde').datepicker();
+    $('#reportHasta').datepicker();
+    $('#calendarVisits').datepicker();
+
+
+
+
+
+
+
+$("#select_modifiedType").on("click",displayItem);
+$("#buttonVisits").on("click", function(e){
+    
+    $("#linkStylePerfil").attr("href","http://localhost/dcaccesscontrol_php/views/layout/css/stylePerfil2.css" );
+});
+
+    links = $("nav").find("a");
+    links.on("click", activateMenu);
 
 	dropdown();
 	clearInput();
 	addUser();
-	//colorNav();
-	validacionRut();
+    validacionRut();
 
 
 

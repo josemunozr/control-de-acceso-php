@@ -13,6 +13,21 @@
         <li><a href="administrador/accessRequest">Solicitud de Acceso</a></li>
     </ul>
 </nav>
+<!--
+<nav>
+    <ul>
+        <a href="administrador"><li>Inicio</li></a>
+        <a  id="menu_usu" href="#">
+            <li>Usuarios</li>
+            <ul id="oculto">
+                <a href="administrador/modifyUser"><li>Modificar</li></a>
+                <a href="administrador/addUser"><li>Agregar</li></a>
+            </ul>
+        </a>
+        <a href="administrador/reports"><li>Reportes</li></a>
+        <a href="administrador/accessRequest"><li>Solicitud de Acceso</li></a>
+    </ul>
+</nav> -->
 <section>
     <div class="item_inicio">
         <hgroup>

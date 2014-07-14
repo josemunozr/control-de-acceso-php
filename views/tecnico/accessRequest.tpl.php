@@ -15,9 +15,9 @@
             <label for="rutEmpresa" class="block">RUT</label>
             <input type="text" id="rutEmpresa" required/>
         </div>
-        <div class="item_calendar inlineBlock margin">
+        <div class="item_calendar inlineBlock margin" title="Seleccione el dia de Visita">
             <label for="date" class="block"	>Día Visita</label>
-            <input type="text" id="date" class="calendar" requierd/>
+
         </div>
         <div class="item_motivoVisita ">
             <label for="motivoVisita" class="block">Motivo Visita</label>

@@ -1,10 +1,12 @@
 <?php
 
-session_name("administrador");
-session_unset("administrador");
-
-
 session_start();
+
+foreach($_SESSION as $key => $value) {
+$_SESSION[$key] = NULL;
+}
+
+
 session_destroy();
 
 

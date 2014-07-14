@@ -32,12 +32,12 @@
         </div>
         <div class="inicioFin">
             <div class="dateInicio inlineBlock">
-                <label for="fechaInicio" class="block">Incio</label>
-                <input type="text" title="Inicio vigencia Perfil" id="fechaInicio" class="calendar"  placeholder="Inicio vigencia Perfil" required/>
+                <label for="fechaInicio" class="block">Inicio</label>
+
             </div>
             <div class="dateFin inlineBlock">
                 <label for="fechaTermino" class="block">Fin</label>
-                <input type="text" title="Fin vigencia Perfil" id="fechaTermino" class="calendar"  placeholder="Inicio vigencia Perfil" required/>
+
             </div>
         </div>
     </form>
