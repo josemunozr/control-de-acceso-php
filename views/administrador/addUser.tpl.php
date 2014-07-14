@@ -49,17 +49,17 @@
             </div>
         </div>
         <div class="inicioFin">
-            <div class="dateInicio inlineBlock" title="Inicio vigencia perfil">
-                <label for="fechaInicio" class="block">Incio</label>
-               <!-- <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" placeholder="Inicio vigencia perfil" required/>-->
+            <div class="dateInicio inlineBlock" title="Inicio vigencia Perfil">
+                <label for="calendar"  class="block">Inicio</label>
+                <input type="text" title="Inicio vigencia Perfil" class="calendar" placeholder="Inicio vigencia Perfil" required/>
             </div>
-            <div class="dateFin inlineBlock" title="Fin vigencia perfil">
-                <label for="fechaTermino" class="block">Fin</label>
-                <!--<input type="text" id="fechaTermino" class="calendar" title="Fin vigencia perfil" placeholder="Fin vigencia perfil" required/>-->
+            <div class="dateFin inlineBlock" title="Fin vigencia Perfil" >
+                <label for="calendar" class="block">Fin</label>
+                <input type="text" title="Fin vigencia Perfil" class="calendar" placeholder="Fin vigencia Perfil" required/>
             </div>
         </div>
-        <div class="buttonSubmit">
-            <input type="submit" value="Enviar" />
-        </div>
+
+        <input type="submit" value="Enviar" />
+
     </form>
 </section>

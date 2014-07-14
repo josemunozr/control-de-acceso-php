@@ -14,7 +14,7 @@
 </nav>
 <section>
     <h3 class="title">Visita Data Center</h3>
-    <form action="#" method="post">
+    <form id="formAccessRequest" action="#" method="post">
         <div class="item_nomEmpresa inlineBlock margin">
             <label for="empresa" class="block">Empresa</label>
             <input type="text" id="empresa" required/>
@@ -25,6 +25,7 @@
         </div>
         <div class="item_calendar inlineBlock margin" title="Seleccione el dia de Visita">
             <label for="date" class="block"	>Día Visita</label>
+            <input type="text" id="fechaInicio" class="calendar"  required/>
 
         </div>
         <div class="item_motivoVisita ">

@@ -21,6 +21,11 @@ class GuardiaController extends BaseController {
 
     }
 
+    public function viewVisitsAction()
+    {
+        return new View('viewVisits', $this->getNameController());
+    }
+
     /*
      * GETTERS
      */

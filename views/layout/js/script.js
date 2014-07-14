@@ -91,8 +91,6 @@ function validacionRut(){
 
 }
 
-
-
 function displayItem(){
     var type = $(this).val();
 
@@ -117,46 +115,22 @@ function displayItem(){
 
 }
 
-    function activateMenu(e)
-    {
-       links.removeClass("active");
-        var elementActive = $(this);
-        elementActive.addClass('active');
-        //e.preventDefault();
-    }
 
 
-
-    $('.item_calendar').datepicker();
-    $('.dateInicio').datepicker();
-    $('.dateFin').datepicker();
-    $('.dateDesde').datepicker();
-    $('.dateHasta').datepicker();
-    $('.diaVisita').datepicker();
-    $('#reportDesde').datepicker();
-    $('#reportHasta').datepicker();
-    $('#calendarVisits').datepicker();
-
-
-
-
-
+    $('.nav_guardia .calendar').datepicker();
+    $('.inicioFin .calendar').datepicker();
+    $('.desde_hasta .calendar').datepicker();
+    $('.item_calendar .calendar').datepicker();
+    $('.diaVisita .calendar').datepicker();
 
 
 $("#select_modifiedType").on("click",displayItem);
-$("#buttonVisits").on("click", function(e){
-    
-    $("#linkStylePerfil").attr("href","http://localhost/dcaccesscontrol_php/views/layout/css/stylePerfil2.css" );
-});
 
-    links = $("nav").find("a");
-    links.on("click", activateMenu);
+
 
 	dropdown();
 	clearInput();
 	addUser();
     validacionRut();
-
-
 
 });

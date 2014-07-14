@@ -41,35 +41,20 @@ class  ControlController extends BaseController {
                 $_SESSION["usuarioActual"] =  $getUser['id_user'];
                 $_SESSION["ultimoAcceso"] = date("Y-n-j H:i:s");
 
-
-
-
-                header ("Location: $perfil");
+               header ("Location: $perfil");
             }
             else
             {
-                echo "<script>alert('Contrase\u00f1a Incorrecta')</script>";
+                echo "<script>alert('Contrase\u00f1a Incorrecta')</script>
+                      <script>window.location='index.php'</script>";
             }
         }
         else
         {
-            echo "<script>alert('Usuario Ingresado No existe')</script>";
+            echo "<script>alert('Usuario Ingresado No existe')</script>
+                  <script>window.location='index.php'</script>";
         }
 
     }
-
-
-
-
-    public function logoutAction()
-    {
-
-        session_start();
-        session_destroy();
-
-        header("Location: ../../ ");
-    }
-
-
 
 }

@@ -25,11 +25,17 @@
             </select>
         </div>
         <div class="desde_hasta">
-            <div id="reportDesde" title="Reporte Desde: " >Desde</div>
-            <div id="reportHasta" title="Reporte Hasta: ">Hasta</div>
+            <div id="reportDesde" title="Reporte Desde: " >
+                <label for="fechaInicio" class="block">Desde</label>
+                <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" required/>
+            </div>
+            <div id="reportHasta" title="Reporte Hasta: ">
+                <label for="fechaInicio" class="block">Hasta</label>
+                <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" required/>
+            </div>
         </div>
-        <div class="buttonSubmit">
+
             <input type="submit"  value="Generar">
-        </div>
+
     </form>
 </section>

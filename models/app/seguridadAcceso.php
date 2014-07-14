@@ -1,7 +1,5 @@
 <?php
 
-
-
 $root = BASE_URL;
 
 session_start();

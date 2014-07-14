@@ -46,15 +46,15 @@
         <div class="inicioFin">
             <div class="dateInicio inlineBlock" title="Inicio vigencia Perfil">
                 <label for="calendar"  class="block">Inicio</label>
-                <!--<input type="text" title="Inicio vigencia Perfil" class="calendar" placeholder="Inicio vigencia Perfil" required/>-->
+                <input type="text" title="Inicio vigencia Perfil" class="calendar" placeholder="Inicio vigencia Perfil" required/>
             </div>
             <div class="dateFin inlineBlock" title="Fin vigencia Perfil" >
                 <label for="calendar" class="block">Fin</label>
-                <!--<input type="text" title="Fin vigencia Perfil" class="calendar" placeholder="Fin vigencia Perfil" required/>-->
+                <input type="text" title="Fin vigencia Perfil" class="calendar" placeholder="Fin vigencia Perfil" required/>
             </div>
         </div>
-        <div class="buttonSubmit">
-            <input type="submit" value="Enviar" />
-        </div>
+
+       <input type="submit" value="Enviar" />
+
     </form>
 </section>

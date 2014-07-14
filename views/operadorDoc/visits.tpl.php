@@ -26,10 +26,11 @@
         </div>
         <div class="diaVisita">
             <label for="diaVisits" class="block">Día</label>
+            <input type="text"  class="calendar"  required/>
 
         </div>
-        <div class="buttonSubmit">
-            <input type="submit"  id="buttonVisits" value="Visualizar">
-        </div>
+
+        <input type="submit"  id="buttonVisits" value="Visualizar">
+
     </form>
 </section>

@@ -1,70 +1,68 @@
-
-
 input[type=submit]
 {
 
-	bottom: 2em;
+    /*bottom: 2em;*/
     background: rgba(208, 46, 16, 0.9);
     box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
     text-shadow: 0 1px black;
     color: white;
     border-radius: 5px;
     border:0;
-	padding: .5em 1.5em;
-	position: absolute;
-	right: 12em;
-	
+    padding: .5em 1.5em;
+    /*position: absolute;
+    right: 12em;*/
+
 }
 
 section form
 {
-	padding: 1em;
+    padding: 1em;
 }
 
 
 section .title
 {
-	margin: .5em 0;
-	text-align: center;
+    margin: .5em 0;
+    text-align: center;
 }
 section .block
 {
-	display: block;
+    display: block;
 }
 
 section .inlineBlock
 {
-	display: inline-block;
+    display: inline-block;
 }
 
 section .item_calendar
 {
-	text-align: center;
+    text-align: center;
 }
 
 section .item_motivoVisita
-{	
-	margin: 0 0 1em 0;
+{
+    margin: 0 0 1em 0;
 }
 section .item_motivoVisita textarea
 {
-	height: 100px;
-	width: 500px;
+    height: 100px;
+    width: 500px;
 }
 
 section .margin
 {
-	margin: 0 5.2em 1.5em 0;
+    margin: 0 5.2em 1.5em 0;
 }
 
 section .visitanes
 {
-	position: relative;
-	width: 800px;
+    position: relative;
+    width: 800px;
 }
 section .visitanes .margin-top
 {
-	margin: 1em 0;
+    margin: 1em 0;
 }
 
 table,tr,td
@@ -77,36 +75,66 @@ tr,td
     padding: 2em 3em;
 }
 
+#formModifyUser input[type=submit]
+{
+    margin-left: 25em;
+}
+
+#formAddUser input[type=submit]
+{
+    margin-left: 25em;
+}
+
+#formReports input[type=submit]
+{
+    margin-left: 25em;
+}
+
+#formAccessRequest input[type=submit]
+{
+    margin-left: 25em;
+}
+
+#formVisits input[type=submit]
+{
+    margin-left: 23em;
+}
+
+#formViewVisits input[type=submit]
+{
+    margin-left: 25em;
+}
 
 #formAddUser
 {
-	position: relative;
+    position: relative;
 }
 #formAddUser .inicioFin
 {
-	
-	margin-top: 2em;
+
+    margin-top: 2em;
 }
 
 #formVisits .listaEmpresas
 {
-	display: block;
-	text-align: center;
+    display: block;
+    text-align: center;
 }
 
 #formVisits .diaVisita
 {
-	display: inline-block;
-	text-align: center;
+    display: block;
+    text-align: center;
 
-	margin: 6em 0 10em 21em;
+    margin: 6em 0 10em 0em;
 
 }
 
+
 #formReports .listaEmpresas
 {
-	display: block;
-	text-align: center;
+    display: block;
+    text-align: center;
 }
 
 #formReports .dateHasta
@@ -150,12 +178,17 @@ tr,td
 
 }
 
-.buttonSubmit 
+#visitasDelDia h3
 {
-	background: black;
-	position: absolute;
-	right: 23%;
-	
+    margin-top: 2em ;
+    text-align: center;
+}
+.buttonSubmit
+{
+    background: black;
+    position: absolute;
+    right: 23%;
+
 }
 
 .bottomAdd
@@ -164,14 +197,15 @@ tr,td
     box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
     text-shadow: 0 1px black;
     border-radius: 5px;
-	height: 30px;
-	margin-top: 1em;	
-	padding: .5em 1.5em 0 1.5em;
-	width: 120px;
+    height: 30px;
+    margin-top: 1em;
+    padding: .5em 1.5em 0 1.5em;
+    width: 120px;
+    display: inline-block;
 }
 .bottomAdd a
 {
-	color: white;
+    color: white;
 }
 
 .clearForm
@@ -180,93 +214,89 @@ tr,td
     box-shadow: rgba(0,0,0,.6) 5px 5px 5px;
     text-shadow: 0 1px black;
     border-radius: 5px;
-	bottom: 2em;
-	padding: .5em 1.5em;
-	position: absolute;
-	right: 5em;
+    bottom: 1em;
+    padding: .5em 1.5em;
+    position: absolute;
+    right: 5em;
 }
 .clearForm a
 {
-	color: white;
+    color: white;
 }
 
-/*widget*/
+
 .ui-widget
 {
-  font-size: 11.5px;
+    font-size: 11.5px;
 }
 
-/*datepicket
-.ui-datepicker {  padding: .2em .2em 0; }
-.ui-datepicker table {width: 100%; font-size: 0.8em; border-collapse: collapse; margin:0 0 .4em; }
-*/
 .dateDesde
 {
-	height: 250px;
-	margin: 0 auto;
-	width: 49%;
+    height: 250px;
+    margin: 0 auto;
+    width: 49%;
     display: block;
-	text-align: center;
+    text-align: center;
 }
 
 .dateHasta
 {
-	
-	height: 250px;
-	margin: 0 auto;
-	width: 49%;
-	display: block;
-	text-align: center;
-	padding-left: .6em;
+
+    height: 250px;
+    margin: 0 auto;
+    width: 49%;
+    display: block;
+    text-align: center;
+    padding-left: .6em;
 }
 .datosEmpresa
 {
-	width: 250px;
-	display: inline-block;
-	text-align: center;
-	margin: 0 5.5em;
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5.5em;
 }
 .datosEmpresa .item_nomEmpresa, .passUser
 {
-	margin: 0 0 1.5em 0;
+    margin: 0 0 1.5em 0;
 }
 .datosUser
 {
-	
-	width: 250px;
-	display: inline-block;
-	text-align: center;
-	margin: 0 5.5em;
+
+    width: 250px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5.5em;
 }
 .datosUser .item_nomUsuario, .item_apellidoUsuario
 {
-	margin: 0 0 1.5em 0;
+    margin: 0 0 1.5em 0;
 }
 
 .desde_hasta
 {
-	height: 250px;
-	margin: 0 auto;
-	width: 700px;
-	padding: 5em 0;
+    height: 250px;
+    margin: 0 auto;
+    width: 700px;
+    padding: 5em 0;
 
 }
 
 .inicioFin
 {
-	height: 250px;
-	margin: 0 auto;
-	width: 700px;
-	
+    height: 250px;
+    margin: 0 auto;
+    width: 700px;
+
 }
 .item_Visitantes label
 {
-	padding: 1em 4.5em;
+    padding: 1em 4.5em;
 }
 
 .item_inputVisitantes input
 {
-	margin: 1em 2em 1em 0;
+    margin: 1em 2em 1em 0;
 }
 
 .item_NomAppe
@@ -274,7 +304,7 @@ tr,td
     text-align: center;
     /*display: block;*/
     display: none;
-    
+
 }
 .item_NomAppe input
 {
@@ -287,7 +317,7 @@ tr,td
 
 .dateInicio
 {
-	margin-right: 9em;
+    margin-right: 9em;
 }
 .dateInicio label
 {
@@ -295,7 +325,7 @@ tr,td
 }
 .dateFin
 {
-	margin-left: 9em;
+    margin-left: 9em;
 }
 
 .dateFin label
@@ -305,13 +335,13 @@ tr,td
 
 .item_rutUsuario, .typePerfil
 {
-	text-align: center;	
-	margin: 0 0 1.5em 0;
+    text-align: center;
+    margin: 0 0 1.5em 0;
 }
 
 .calendar
 {
-	display: inline;
+    display: inline;
 }
 
 .modified_rutUsuario
@@ -320,3 +350,4 @@ tr,td
     margin: 0 0 1.5em 0;
     display: none;
 }
+
