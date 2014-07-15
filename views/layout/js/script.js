@@ -119,7 +119,8 @@ function displayItem(){
 
     $('.nav_guardia .calendar').datepicker();
     $('.inicioFin .calendar').datepicker();
-    $('.desde_hasta .calendar').datepicker();
+    $('#reportDesde .calendar').datepicker();
+    $('#reportHasta .calendar').datepicker();
     $('.item_calendar .calendar').datepicker();
     $('.diaVisita .calendar').datepicker();
 

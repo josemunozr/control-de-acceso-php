@@ -14,7 +14,7 @@
 </nav>
 <section>
     <h3 class="title">Reportes</h3>
-    <form id="formReports" action="#" method="post">
+    <form id="formReports" action="reportPdf" method="post">
         <div class="listaEmpresas">
             <label for="listaEmpresas" class="block">Empresa</label>
             <select name="listaEmpresas" id="listaEmpresas">
@@ -25,12 +25,12 @@
         </div>
         <div class="desde_hasta">
             <div id="reportDesde" title="Reporte Desde: " >
-                <label for="fechaInicio" class="block">Desde</label>
-                <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" required/>
+                <label for="fechaDesde" class="block">Desde</label>
+                <input type="text" id="fechaDesde" class="calendar" title="Inicio vigencia perfil" required/>
             </div>
             <div id="reportHasta" title="Reporte Hasta: ">
-                <label for="fechaInicio" class="block">Hasta</label>
-                <input type="text" id="fechaInicio" class="calendar" title="Inicio vigencia perfil" required/>
+                <label for="fechaHasta" class="block">Hasta</label>
+                <input type="text" id="fechaHasta" class="calendar" title="Inicio vigencia perfil" required/>
             </div>
         </div>
 

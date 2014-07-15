@@ -4,12 +4,23 @@ class AdministradorController extends BaseController {
 
     protected $nameController = "administrador";
 
+
     //vars index
     protected  $name     = "Nombre Administrador";
     protected  $empresa  = "Nombre Empresa";
     protected  $correo   = "Correo Usuario";
 
-    //HOME
+    protected $pdf;
+
+    public function __construct()
+    {
+        $this->getLibrary('fpdf');
+
+        $this->pdf = new FPDF();
+
+    }
+
+    //VISTAS
     public function indexAction()
     {
 
@@ -40,6 +51,21 @@ class AdministradorController extends BaseController {
     public function reportsAction()
     {
         return new View('reports', $this->getNameController());
+    }
+
+
+    //LIRABRY
+    public function reportPdfAction()
+    {
+
+       $name = $this->getName();
+
+        $this->pdf->AddPage();
+        $this->pdf->SetFont('Arial','B',16);
+        $this->pdf->Cell(40,10,utf8_decode('¡Hola, ' . $name . '!'));
+       // $this->pdf->Output("prueba.pdf", "D");
+        $this->pdf->Output();
+
     }
 
 

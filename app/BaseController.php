@@ -22,4 +22,17 @@ abstract class BaseController {
         }
     }
 
+
+    protected function getLibrary($libreria)
+    {
+        $rutaLibreria = "library/$libreria.php";
+
+        if(is_readable($rutaLibreria)){
+            require_once $rutaLibreria;
+        }
+        else{
+            throw new Exception('Error de libreria');
+        }
+    }
+
 }
