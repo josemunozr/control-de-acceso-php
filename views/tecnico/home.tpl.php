@@ -8,7 +8,7 @@
     <div class="item_inicio">
         <hgroup>
             <h3>Bienvenido</h3>
-            <h2><?= $nombre; ?></h2>
+            <h1><?= $nombre; ?></h1>
         </hgroup>
     </div>
     <div class="personal_data">

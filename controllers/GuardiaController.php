@@ -3,10 +3,21 @@
 class GuardiaController extends BaseController {
 
     protected $nameController = "guardia";
+    protected $user;
 
     //vars index
-    protected $name  = "Nombre Guardia";
-    protected $correo = "Correo Usuario";
+    protected $name;
+    protected $correo;
+
+    protected $model;
+
+    public function __construct()
+    {
+        session_start();
+
+        $this->model = $this->loadModels('datosHome');
+        $this->user = $_SESSION["usuarioActual"];
+    }
 
 
     public function indexAction()
@@ -32,12 +43,14 @@ class GuardiaController extends BaseController {
 
     public function getCorreo()
     {
-        return $this->correo;
+        $dato = $this->model->getCorreoUser($this->user);
+        return $dato['correo'];
     }
 
     public function getName()
     {
-        return $this->name;
+        $dato = $this->model->getNombreApellidoUser($this->user);
+        return $dato['nombre'] . " " .  $dato['apellido'];
     }
 
     public function getNameController()

@@ -5,13 +5,19 @@ class OperadorDocController extends BaseController {
     protected $nameController = "operadorDoc";
 
     //vars index
-    protected  $nameOperator   = "Nombre operador Doc";
-    protected  $correo         = "Correo Usuario";
+    protected  $name;
+    protected  $correo;
 
     protected $pdf;
+    protected $model;
 
     public function __construct()
     {
+        session_start();
+
+        $this->model = $this->loadModels('datosHome');
+        $this->user = $_SESSION["usuarioActual"];
+
         $this->getLibrary('fpdf');
         $this->pdf = new FPDF();
     }
@@ -22,7 +28,7 @@ class OperadorDocController extends BaseController {
 
         return new View('home',$this->getNameController(), [
 
-            'nombre' => $this->getNameOperator(),
+            'nombre' => $this->getName(),
             'correo' => $this->getCorreo()
 
         ]);
@@ -79,7 +85,14 @@ class OperadorDocController extends BaseController {
 
     public function getCorreo()
     {
-        return $this->correo;
+        $dato = $this->model->getCorreoUser($this->user);
+        return $dato['correo'];
+    }
+
+    public function getName()
+    {
+        $dato = $this->model->getNombreApellidoUser($this->user);
+        return $dato['nombre'] . " " . $dato['apellido'];
     }
 
     public function getNameController()
@@ -87,10 +100,7 @@ class OperadorDocController extends BaseController {
         return $this->nameController;
     }
 
-    public function getNameOperator()
-    {
-        return $this->nameOperator;
-    }
+
 
 
 

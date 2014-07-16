@@ -3,19 +3,27 @@
 class AdministradorController extends BaseController {
 
     protected $nameController = "administrador";
-
+    protected $user; //Usuario que ingresa
 
     //vars index
-    protected  $name     = "Nombre Administrador";
-    protected  $empresa  = "Nombre Empresa";
-    protected  $correo   = "Correo Usuario";
+
+    protected  $name;
+    protected  $empresa;
+    protected  $correo;
 
     protected $pdf;
+    protected $model;
 
     public function __construct()
     {
-        $this->getLibrary('fpdf');
 
+        session_start();
+
+        $this->model = $this->loadModels('datosHome');
+        $this->user = $_SESSION["usuarioActual"];
+
+
+        $this->getLibrary('fpdf');
         $this->pdf = new FPDF();
 
     }
@@ -75,19 +83,22 @@ class AdministradorController extends BaseController {
 
     public function getCorreo()
     {
-        return $this->correo;
+        $dato = $this->model->getCorreoUser($this->user);
+        return $dato['correo'];
     }
 
 
     public function getEmpresa()
     {
-        return $this->empresa;
+        $dato = $this->model->getNombreEmpresaUser($this->user);
+        return $dato['nombre'];
     }
 
 
     public function getName()
     {
-        return $this->name;
+        $dato = $this->model->getNombreApellidoUser($this->user);
+        return $dato['nombre'] . " " .  $dato['apellido'];
     }
 
     public function getNameController()

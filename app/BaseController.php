@@ -22,7 +22,6 @@ abstract class BaseController {
         }
     }
 
-
     protected function getLibrary($libreria)
     {
         $rutaLibreria = "library/$libreria.php";
@@ -32,6 +31,26 @@ abstract class BaseController {
         }
         else{
             throw new Exception('Error de libreria');
+        }
+    }
+
+    protected function typePerfil($codigo){
+
+        if($codigo == '1')
+        {
+            return "operadorDoc";
+        }
+        elseif($codigo == '2')
+        {
+            return "administrador";
+        }
+        elseif($codigo == '3')
+        {
+            return "tecnico";
+        }
+        elseif($codigo == '4')
+        {
+            return "guardia";
         }
     }
 

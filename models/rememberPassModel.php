@@ -1,15 +1,14 @@
 <?php
 
-class ControllModel extends Model {
+class RememberPassModel extends Model {
 
-    public function _construct()
+    public function __construct()
     {
         parent::__construct();
     }
 
     public function getUser($usuario)
     {
-
         $sql_user = $this->_db->prepare("SELECT cod_usu FROM usuario
                                     WHERE cod_usu = '$usuario'");
         $sql_user->execute();
@@ -28,24 +27,23 @@ class ControllModel extends Model {
         return $sql;
     }
 
-    public function validatePass($usuario, $pass)
+    public function validateCorreo($correo)
     {
-        $sql_pass = $this->_db->prepare("SELECT cod_usu FROM usuario
-                                    WHERE cod_usu = '$usuario'
-                                    AND   pwd  = '$pass'");
+        $sql_user = $this->_db->prepare("SELECT correo FROM usuario
+                                    WHERE correo = '$correo'");
+        $sql_user->execute();
+        $sql = $sql_user->rowCount();
 
-        $sql_pass->execute();
-        $sql = $sql_pass->rowCount();
         return $sql;
     }
 
-    public function getPerfil($usuario)
+    public function getCorreo($usuario)
     {
-         $sql_perfil = $this->_db->prepare("SELECT cod_TipPer FROM usuario
-                                         WHERE cod_usu = '$usuario'");
+        $sql_user = $this->_db->prepare("SELECT correo FROM usuario
+                                    WHERE cod_usu = '$usuario'");
+        $sql_user->execute();
+        $sql = $sql_user->fetch();
 
-        $sql_perfil->execute();
-        $sql = $sql_perfil->fetch();
         return $sql;
     }
 

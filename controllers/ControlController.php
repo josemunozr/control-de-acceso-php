@@ -2,8 +2,8 @@
 
 class  ControlController extends BaseController {
 
-    protected $user;
-    protected $pass;
+    protected   $user;
+    protected   $pass;
 
     protected $model;
 
@@ -12,6 +12,7 @@ class  ControlController extends BaseController {
         $this->model = $this->loadModels('controll');
         $this->user = $_POST['usuario'];
         $this->pass = $_POST['pass'];
+
 
     }
 
@@ -32,16 +33,18 @@ class  ControlController extends BaseController {
 
             if($validatePass != 0) // Se valida si la clave de usuario existe o es correcta
             {
-                $perfil =  $getPerfil['tipo_perfil'];
-                $user =  $getUser['id_user'];
+                $perfil =  $getPerfil['cod_TipPer'];
+                $viewPerfil = $this->typePerfil($perfil);
+                $user =  $getUser['cod_usu'];
 
                 session_start();
+
                 $_SESSION["name"] = $user;
                 $_SESSION["autentificado"] = "SI";
-                $_SESSION["usuarioActual"] =  $getUser['id_user'];
+                $_SESSION["usuarioActual"] =  $getUser['cod_usu'];
                 $_SESSION["ultimoAcceso"] = date("Y-n-j H:i:s");
 
-               header ("Location: $perfil");
+                header ("Location: $viewPerfil");
             }
             else
             {
@@ -56,5 +59,8 @@ class  ControlController extends BaseController {
         }
 
     }
+
+
+
 
 }

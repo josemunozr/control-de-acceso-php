@@ -19,7 +19,7 @@
             <hgroup>
                 <h3>Bienvenido</h3>
                 <!--<h2>Nombre Operador Doc</h2>-->
-                <h2><?= $nombre; ?></h2>
+                <h1><?= $nombre; ?></h1>
 
             </hgroup>
         </div>
