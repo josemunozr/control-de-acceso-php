@@ -9,8 +9,10 @@ abstract class BaseController {
         $modelo = $model . 'Model';
         $rutaModel = "models/$modelo.php";
 
+
         if(is_readable($rutaModel))
         {
+
             require $rutaModel;
             $modelo = new $modelo;
 
@@ -18,6 +20,7 @@ abstract class BaseController {
         }
         else
         {
+
             throw new Exception('Error de modelo');
         }
     }

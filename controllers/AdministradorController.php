@@ -5,23 +5,27 @@ class AdministradorController extends BaseController {
     protected $nameController = "administrador";
     protected $user; //Usuario que ingresa
 
-    //vars index
-
+    //vars home
     protected  $name;
     protected  $empresa;
     protected  $correo;
 
+    //library
     protected $pdf;
-    protected $model;
+
+    //models
+    protected $modelHome;
+    protected $modelAddUser;
 
     public function __construct()
     {
 
         session_start();
 
-        $this->model = $this->loadModels('datosHome');
-        $this->user = $_SESSION["usuarioActual"];
+        $this->modelHome = $this->loadModels('datosHome');
+        $this->modelAddUser = $this->loadModels('setDatos');
 
+        $this->user = $_SESSION["usuarioActual"];
 
         $this->getLibrary('fpdf');
         $this->pdf = new FPDF();
@@ -62,6 +66,35 @@ class AdministradorController extends BaseController {
     }
 
 
+    public function newUserAction()
+    {
+
+        $user = utf8_decode($_POST['rutUsuario']);
+        $nombre = utf8_decode($_POST['nombreUsuario']);
+        $apellido = utf8_decode($_POST['apellidoUsuario']);
+        $dateIni =  utf8_decode($_POST['fechaInicio']);
+        $dateFin = utf8_decode($_POST['fechaFin']);
+        $pass =  utf8_decode($_POST['passUsuario']);
+        $tipoPerfil =  utf8_decode($_POST['tipoPerfil']);
+        $codEmp =  utf8_decode($_POST['nombreEmpresa']);
+
+
+      $insert =   $this->modelAddUser->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp);
+
+        if($insert == true){
+            echo "<script>alert('Datos guardados correctamente')</script>
+                      <script>window.location='index'</script>";
+        }
+        else
+        {
+            echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
+                      <script>window.location='index'</script>";
+        }
+
+
+    }
+
+
     //LIRABRY
     public function reportPdfAction()
     {
@@ -83,21 +116,21 @@ class AdministradorController extends BaseController {
 
     public function getCorreo()
     {
-        $dato = $this->model->getCorreoUser($this->user);
+        $dato = $this->modelHome->getCorreoUser($this->user);
         return $dato['correo'];
     }
 
 
     public function getEmpresa()
     {
-        $dato = $this->model->getNombreEmpresaUser($this->user);
+        $dato = $this->modelHome->getNombreEmpresaUser($this->user);
         return $dato['nombre'];
     }
 
 
     public function getName()
     {
-        $dato = $this->model->getNombreApellidoUser($this->user);
+        $dato = $this->modelHome->getNombreApellidoUser($this->user);
         return $dato['nombre'] . " " .  $dato['apellido'];
     }
 
