@@ -28,6 +28,9 @@
                 <label for="apellidoUsuario" class="block">Apellido</label>
                 <input type="text" class="apellidoUsuario" name="apellidoUsuario" required/>
             </div>
+            <label for="correoUsuario" class="block">Correo</label>
+            <input type="text" class="correoUsuario" name="correoUsuario" required/>
+
         </div>
         <div class="datosEmpresa">
             <div class="typePerfil">

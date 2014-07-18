@@ -14,7 +14,7 @@
         <li><a href="../operadorDoc/accessRequest">Solicitud de Acceso</a></li>
     </ul>
 </nav>
-<section>
+<section id="modifyUserOperDoc">
     <h3 class="title">Modificación de Usuario</h3>
     <form id="formModifyUser" action="#" method="post">
         <div id="modified_type">

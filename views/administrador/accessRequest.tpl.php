@@ -15,12 +15,9 @@
 <section>
     <h3 class="title">Visita Data Center</h3>
     <form id="formAccessRequest" action="#" method="post">
-        <div class="item_nomEmpresa inlineBlock margin">
-            <label for="empresa" class="block">Empresa</label>
-            <input type="text" id="empresa" required/>
-        </div>
+
         <div class="item_rutEmpresa inlineBlock margin">
-            <label for="rutEmpresa" class="block">RUT</label>
+            <label for="rutEmpresa" class="block">Rut Empresa</label>
             <input type="text" id="rutEmpresa" required/>
         </div>
         <div class="item_calendar inlineBlock margin" title="Seleccione el dia de Visita">

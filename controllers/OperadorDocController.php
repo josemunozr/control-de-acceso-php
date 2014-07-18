@@ -12,6 +12,7 @@ class OperadorDocController extends BaseController {
     protected $pdf;
     protected $modelHome;
     protected $modelAddUser;
+    protected $modelGetData;
 
     public function __construct()
     {
@@ -19,6 +20,8 @@ class OperadorDocController extends BaseController {
 
         $this->modelHome = $this->loadModels('datosHome');
         $this->modelAddUser = $this->loadModels('setDatos');
+        $this->modelGetData = $this->loadModels('getDatos');
+
 
         $this->user = $_SESSION["usuarioActual"];
 
@@ -57,7 +60,12 @@ class OperadorDocController extends BaseController {
 
     public function visitsAction()
     {
-        return new View('visits', $this->getNameController());
+        $ListaEmpresa = $this->modelGetData->getListEmpresa();
+
+
+        return new View('visits', $this->getNameController(),[
+            'listEmpresa' => $ListaEmpresa
+        ]);
     }
 
     public function viewVisitsAction()
@@ -67,7 +75,11 @@ class OperadorDocController extends BaseController {
 
     public function reportsAction()
     {
-        return new View('reports', $this->getNameController());
+        $ListaEmpresa = $this->modelGetData->getListEmpresa();
+
+        return new View('reports', $this->getNameController(),[
+                'listEmpresa' => $ListaEmpresa
+            ]);
     }
 
     public function reportPdfAction()

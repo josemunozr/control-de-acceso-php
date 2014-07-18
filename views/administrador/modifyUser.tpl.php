@@ -12,7 +12,7 @@
         <li><a href="../administrador/accessRequest">Solicitud de Acceso</a></li>
     </ul>
 </nav>
-<section>
+<section id="modifyUserAdmin">
     <h3 class="title">Modificación de Usuario</h3>
     <form id="formModifyUser" action="asd.php" method="post">
        <div id="modified_type">

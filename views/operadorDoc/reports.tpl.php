@@ -19,9 +19,10 @@
         <div class="listaEmpresas">
             <label for="listaEmpresas" class="block">Empresa</label>
             <select name="listaEmpresas" id="listaEmpresas">
-                <option value="">Seleccione Empresa</option>
-                <option value="">Empresa 1...</option>
-                <option value="">Empresa 2...</option>
+                <option SELECTED>Seleccione Empresa</option>
+                <?php foreach ($listEmpresa as $valor) { ?>
+                    <option value="<?= $valor['cod_emp']?>"><?= $valor['nombre']?></option>
+                <?php } ?>
             </select>
         </div>
         <div class="desde_hasta">

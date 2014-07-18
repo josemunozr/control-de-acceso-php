@@ -75,6 +75,21 @@ tr,td
     padding: 2em 3em;
 }
 
+#addUser
+{
+    height: 570px;
+}
+#formModifyUser
+{
+    height: 370px;
+
+}
+
+#formModifyUser .inicioFin
+{
+    height: 200px;
+}
+
 #formModifyUser input[type=submit]
 {
     margin-left: 25em;
@@ -83,6 +98,7 @@ tr,td
 #formAddUser input[type=submit]
 {
     margin-left: 25em;
+
 }
 
 #formReports input[type=submit]
@@ -93,6 +109,11 @@ tr,td
 #formAccessRequest input[type=submit]
 {
     margin-left: 25em;
+}
+
+#formAccessRequest .item_rutEmpresa
+{
+    margin-right: 23em;
 }
 
 #formVisits input[type=submit]
@@ -108,6 +129,7 @@ tr,td
 #formAddUser
 {
     position: relative;
+    height: 570px;
 }
 #formAddUser .inicioFin
 {
@@ -140,6 +162,15 @@ tr,td
 #formReports .dateHasta
 {
 
+}
+
+#modifyUserOperDoc
+{
+    height: 580px;
+}
+#modifyUserAdmin
+{
+    height: 580px;
 }
 
 #modified_type
@@ -252,10 +283,11 @@ tr,td
 .datosEmpresa
 {
     width: 250px;
-    display: inline-block;
-
+    /*display: inline-block;*/
+    float: left;
     text-align: center;
     margin: 0 5.5em;
+    height: 290px;
 }
 .datosEmpresa .item_nomEmpresa, .passUser
 {
@@ -265,7 +297,8 @@ tr,td
 {
 
     width: 250px;
-    display: inline-block;
+    /*display: inline-block;*/
+    float: left;
     text-align: center;
     margin: 0 5.5em;
 }
@@ -285,7 +318,7 @@ tr,td
 
 .inicioFin
 {
-    height: 250px;
+    height: 420px;
     margin: 0 auto;
     width: 700px;
 

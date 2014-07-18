@@ -7,6 +7,7 @@ class GuardiaController extends BaseController {
 
     //vars index
     protected $name;
+    protected $empresa;
     protected $correo;
 
     protected $model;
@@ -26,7 +27,8 @@ class GuardiaController extends BaseController {
         return new View('home', $this->getNameController(), [
 
             'nombre' => $this->getName(),
-            'correo' => $this->getCorreo()
+            'correo' => $this->getCorreo(),
+            'empresa' => $this->getEmpresa()
 
         ]);
 
@@ -46,6 +48,17 @@ class GuardiaController extends BaseController {
         $dato = $this->model->getCorreoUser($this->user);
         return $dato['correo'];
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEmpresa()
+    {
+        $dato = $this->model->getNombreEmpresaUser($this->user);
+        return $dato['nombre'];
+    }
+
+
 
     public function getName()
     {

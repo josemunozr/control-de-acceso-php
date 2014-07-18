@@ -13,7 +13,7 @@
         <li><a href="../operadorDoc/accessRequest">Solicitud de Acceso</a></li>
     </ul>
 </nav>
-<section>
+<section id="addUser">
     <h3 class="title">Agregar Usuario</h3>
     <form id="formAddUser" action="newUser" method="post">
         <div class="datosUser">
@@ -29,10 +29,8 @@
                 <label for="apellidoUsuario" class="block">Apellido</label>
                 <input type="text" class="apellidoUsuario" name="apellidoUsuario" required/>
             </div>
-            <div class="item_correUsuario inlineBlock">
-                <label for="correoUsuario" class="block">Correo</label>
-                <input type="text" class="correoUsuario" name="correoUsuario" required/>
-            </div>
+            <label for="correoUsuario" class="block">Correo</label>
+            <input type="text" class="correoUsuario" name="correoUsuario" required/>
         </div>
         <div class="datosEmpresa">
             <div class="typePerfil">
@@ -53,7 +51,9 @@
                 <input type="text" id="passUser"  name="passUsuario" required/>
             </div>
         </div>
-        <div class="inicioFin">
+
+
+      <div class="inicioFin">
             <div class="dateInicio inlineBlock" title="Inicio vigencia Perfil">
                 <label for="calendar"  class="block">Inicio</label>
                 <input type="text" title="Inicio vigencia Perfil" class="calendar" name="fechaInicio" placeholder="Inicio vigencia Perfil" required/>

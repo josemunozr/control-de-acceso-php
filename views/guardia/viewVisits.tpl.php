@@ -1,6 +1,6 @@
 <nav class="nav_guardia">
     <ul>
-        <li><a href="#">Inicio</a></li>
+        <li><a href="../guardia">Inicio</a></li>
         <form id="calendarGuardia" action="guardia/viewVisits" method="post">
             <div id="calendarVisits" title="Lista de visitantes por día">
                 <label for="date" class="block"	>Visita</label>
