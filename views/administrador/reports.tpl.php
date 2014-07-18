@@ -15,7 +15,7 @@
 <section>
     <h3 class="title">Reportes</h3>
     <form id="formReports" action="reportPdf" method="post">
-        <div class="listaEmpresas">
+        <!--<div class="listaEmpresas">
             <label for="listaEmpresas" class="block">Empresa</label>
             <select name="listaEmpresas" id="listaEmpresas">
                 <option value="">Seleccione Empresa</option>
@@ -23,6 +23,7 @@
                 <option value="">Empresa 2...</option>
             </select>
         </div>
+        -->
         <div class="desde_hasta">
             <div id="reportDesde" title="Reporte Desde: " >
                 <label for="fechaDesde" class="block">Desde</label>

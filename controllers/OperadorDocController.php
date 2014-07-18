@@ -6,6 +6,7 @@ class OperadorDocController extends BaseController {
 
     //vars index
     protected  $name;
+    protected  $empresa;
     protected  $correo;
 
     protected $pdf;
@@ -32,7 +33,8 @@ class OperadorDocController extends BaseController {
         return new View('home',$this->getNameController(), [
 
             'nombre' => $this->getName(),
-            'correo' => $this->getCorreo()
+            'correo' => $this->getCorreo(),
+            'empresa'=> $this->getEmpresa()
 
         ]);
     }
@@ -125,6 +127,15 @@ class OperadorDocController extends BaseController {
         $dato = $this->modelHome->getNombreApellidoUser($this->user);
         return $dato['nombre'] . " " . $dato['apellido'];
     }
+
+
+    public function getEmpresa()
+    {
+        $dato = $this->modelHome->getNombreEmpresaUser($this->user);
+        return $dato['nombre'];
+    }
+
+
 
     public function getNameController()
     {

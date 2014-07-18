@@ -38,9 +38,7 @@
             <label for="tipoPerfil" class="block ">Tipo de Perfil</label>
             <select name="tipoPerfil" id="tipoPerfil">
                 <option value="">Seleccione un perfil</option>
-                <option value="Administrador">Administrador</option>
-                <option value="Administrador">Operador Doc</option>
-                <option value="Administrador">Técnico</option>
+                <option value="3">Técnico</option>
             </select>
         </div>
         <div class="inicioFin">

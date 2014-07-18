@@ -34,14 +34,12 @@
                 <label for="tipoPerfil" class="block ">Tipo de Perfil</label>
                 <select name="tipoPerfil" id="tipoPerfil">
                     <option SELECTED>Seleccione un perfil</option>
-                    <option value="2">Administrador</option>
-                    <option value="1">Operador Doc</option>
                     <option value="3">Técnico</option>
                 </select>
             </div>
             <div class="item_nomEmpresa inlineBlock">
                 <label for="empresa" class="block">Empresa</label>
-                <input type="text" id="empresa" name="nombreEmpresa" required/>
+                <input type="text" id="empresa" name="nombreEmpresa" placeholder="Ingresar rut Empresa" required/>
             </div>
             <div class="passUser inlineBlock">
                 <label for="passUser" class="block">Contraseña</label>

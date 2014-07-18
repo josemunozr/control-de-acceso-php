@@ -82,7 +82,7 @@ class AdministradorController extends BaseController {
         $insert =   $this->modelAddUser->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp);
 
         if($insert == true){
-            echo "<script>alert('Datos guardados correctamente')</script>
+            echo "<script>alert('Se Agrego Usuario Correctamente')</script>
                       <script>window.location='index'</script>";
         }
         else

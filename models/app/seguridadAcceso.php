@@ -21,7 +21,7 @@ else{
     $tiempo_transcurrido = (strtotime($ahora)-strtotime($fechaGuardada));
 
 
-    if($tiempo_transcurrido >= 600) {
+    if($tiempo_transcurrido >= 6000) {
 
         session_destroy();
 
