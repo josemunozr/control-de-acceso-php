@@ -4,6 +4,7 @@ class AdministradorController extends BaseController {
 
     protected $nameController = "administrador";
     protected $user; //Usuario que ingresa
+    protected $perfil;
 
     //vars home
     protected  $name;
@@ -26,6 +27,7 @@ class AdministradorController extends BaseController {
         $this->modelAddUser = $this->loadModels('setDatos');
 
         $this->user = $_SESSION["usuarioActual"];
+        $this->perfil = $_SESSION["perfil"];
 
         $this->getLibrary('fpdf');
         $this->pdf = new FPDF();
@@ -69,6 +71,8 @@ class AdministradorController extends BaseController {
     public function newUserAction()
     {
 
+        $base_perfil = $this->perfil;
+
         $user = utf8_decode($_POST['rutUsuario']);
         $nombre = utf8_decode($_POST['nombreUsuario']);
         $apellido = utf8_decode($_POST['apellidoUsuario']);
@@ -77,18 +81,19 @@ class AdministradorController extends BaseController {
         $pass =  utf8_decode($_POST['passUsuario']);
         $tipoPerfil =  utf8_decode($_POST['tipoPerfil']);
         $codEmp =  utf8_decode($_POST['nombreEmpresa']);
+        $correo = utf8_decode($_POST['correoUsuario']);
 
 
-        $insert =   $this->modelAddUser->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp);
+        $insert =   $this->modelAddUser->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp,$correo);
 
         if($insert == true){
-            echo "<script>alert('Se Agrego Usuario Correctamente')</script>
-                      <script>window.location='index'</script>";
+            echo "<script>alert('Datos guardados correctamente')</script>
+                      <script>window.location='../$base_perfil'</script>";
         }
         else
         {
             echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
-                      <script>window.location='index'</script>";
+                      <script>window.location='addUser'</script>";
         }
 
 

@@ -39,7 +39,7 @@ class  ControlController extends BaseController {
 
                 session_start();
 
-                $_SESSION["name"] = $user;
+                $_SESSION["perfil"] = $this->typePerfil($perfil);
                 $_SESSION["autentificado"] = "SI";
                 $_SESSION["usuarioActual"] =  $getUser['cod_usu'];
                 $_SESSION["ultimoAcceso"] = date("Y-n-j H:i:s");

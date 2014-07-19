@@ -3,7 +3,8 @@
 class OperadorDocController extends BaseController {
 
     protected $nameController = "operadorDoc";
-
+    protected $user;
+    protected $perfil;
     //vars index
     protected  $name;
     protected  $empresa;
@@ -11,7 +12,7 @@ class OperadorDocController extends BaseController {
 
     protected $pdf;
     protected $modelHome;
-    protected $modelAddUser;
+    protected $modelSetData;
     protected $modelGetData;
 
     public function __construct()
@@ -19,11 +20,14 @@ class OperadorDocController extends BaseController {
         session_start();
 
         $this->modelHome = $this->loadModels('datosHome');
-        $this->modelAddUser = $this->loadModels('setDatos');
+        $this->modelSetData = $this->loadModels('setDatos');
         $this->modelGetData = $this->loadModels('getDatos');
 
 
         $this->user = $_SESSION["usuarioActual"];
+        $this->perfil = $_SESSION["perfil"];
+
+
 
         $this->getLibrary('fpdf');
         $this->pdf = new FPDF();
@@ -98,6 +102,9 @@ class OperadorDocController extends BaseController {
     public function newUserAction()
     {
 
+        $base_perfil = $this->perfil;
+
+
         $user = utf8_decode($_POST['rutUsuario']);
         $nombre = utf8_decode($_POST['nombreUsuario']);
         $apellido = utf8_decode($_POST['apellidoUsuario']);
@@ -106,19 +113,62 @@ class OperadorDocController extends BaseController {
         $pass =  utf8_decode($_POST['passUsuario']);
         $tipoPerfil =  utf8_decode($_POST['tipoPerfil']);
         $codEmp =  utf8_decode($_POST['nombreEmpresa']);
+        $correo = utf8_decode($_POST['correoUsuario']);
 
 
-        $insert =   $this->modelAddUser->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp);
+        $insert =   $this->modelSetData->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp,$correo);
 
         if($insert == true){
             echo "<script>alert('Datos guardados correctamente')</script>
-                      <script>window.location='index'</script>";
+                      <script>window.location='../$base_perfil'</script>";
         }
         else
         {
             echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
-                      <script>window.location='index'</script>";
+                      <script>window.location='addUser'</script>";
         }
+
+
+    }
+
+    public function newVisitsAction()
+    {
+        $base_perfil = $this->perfil;
+        $cantInput = (integer)$_POST['cantInput'];
+
+        $inputVisitantes = array();
+        for($i=1;$i<=$cantInput; $i++)
+        {
+            $inputVisitantes[$i]=array(
+                "nombre$i" => $_POST["nombreUsuario$i"],
+                "apellido$i" => $_POST["apellidoUsuario$i"],
+                "rut$i" => $_POST["rutUsuario$i"]
+            );
+        }
+
+
+
+
+        $rutEmp = utf8_decode($_POST["rutEmpresa"]);
+        $rutSolicitante = $this->user;
+        $motivo = utf8_decode($_POST["motivoVisita"]);
+        $fecha = utf8_decode($_POST["fechaVisita"]);
+        $hora = utf8_decode($_POST["horaVisita"]);
+
+
+
+        $setDatos = $this->modelSetData->accessRequest($cantInput,$inputVisitantes,$rutEmp,$rutSolicitante,$motivo,$fecha,$hora );
+
+            if($setDatos == true)
+            {
+                echo "<script>alert('Datos guardados correctamente')</script>
+                      <script>window.location='../$base_perfil'</script>";
+            }
+            else
+            {
+                echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
+                      <script>window.location='accessRequest'</script>";
+            }
 
 
     }

@@ -14,7 +14,7 @@ $(document).ready(function(){
         dayNamesShort: ['Dom','Lun','Mar','Mi&eacute;','Juv','Vie','S&aacute;b'],
         dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S&aacute;'],
         weekHeader: 'Sm',
-        dateFormat: 'dd-mm-yy',
+        dateFormat: 'dd/mm/yy',
         firstDay: 1,
         isRTL: false,
         showMonthAfterYear: false,
@@ -39,6 +39,7 @@ function dropdown(){
 	
 }
 
+    var cantInput = 2;
 function clearInput(){
 
 	$('.clearForm').click(function(e){
@@ -57,6 +58,7 @@ function clearInput(){
 		$('.clone').remove();
 
 		$('.content').css("height", "140%");
+        cantInput = 2;
 
 	});
 
@@ -66,14 +68,22 @@ function addUser(){
 
 	$('.bottomAdd').click(function(e){
 		e.preventDefault();
-		
+            cantInput++;
+
 		var input = $('.item_addInput').last();
 
 		var cloneInput = input.clone(true);
 		
-		$('.item_inputVisitantes').append(cloneInput)
+		var asd = $('.item_inputVisitantes').append(cloneInput);
+
 
 		$('.item_addInput').last().addClass("clone");
+        $('.item_addInput .nombreUsuario').last().attr("name","nombreUsuario"+ (cantInput));
+        $('.item_addInput .apellidoUsuario').last().attr("name","apellidoUsuario"+ (cantInput));
+        $('.item_addInput .rutUsuario').last().attr("name","rutUsuario"+ (cantInput));
+        $('#cantInput').attr("value",cantInput);
+
+
 
 		$('.content').css("height", "+=70%");
 
@@ -99,11 +109,11 @@ function validacionRut(){
 		}
 	});
 		// format Rut Company
-	$('.item_rutEmpresa #rutEmpresa')
+	/*$('.item_rutEmpresa #rutEmpresa')
 	.Rut({
-		format_on: 'keyup'
+		//format_on: 'keyup'
 	});
-
+*/
     $('.modified_rutUsuario #rutUsuario')
      .Rut({
             format_on: 'keyup',
