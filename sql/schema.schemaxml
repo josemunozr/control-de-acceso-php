@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="utf8" collation="utf8_spanish_ci">systemaccesocontrol</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="tipoperfil" view="standard">
+<left>34</left>
+<top>108</top>
+<width>190</width>
+<height>112</height>
+<sql_create_table>CREATE TABLE `tipoperfil` (
+  `cod_per` int(5) NOT NULL COMMENT '(PK) 1.-Admin 2.-DOC 3.-Guardia 4.-Tecnico',
+  `nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Nombre de perfiles de usuario',
+  PRIMARY KEY (`cod_per`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci</sql_create_table>
+</table>
+<table name="usuarioagendado" view="standard">
+<left>552</left>
+<top>19</top>
+<width>235</width>
+<height>129</height>
+<sql_create_table>CREATE TABLE `usuarioagendado` (
+  `cod_UsuAgenda` int(15) NOT NULL COMMENT '(FK) codigo registro agendamiento realizado por empresa',
+  `cod_usu` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(FK) rut usuario que visita',
+  `estadou` varchar(10) COLLATE utf8_spanish_ci NOT NULL COMMENT 'dos estados:Asiste - NoAsiste',
+  KEY `FK_UsuarioAgendado` (`cod_usu`),
+  KEY `FK_UsuAgenAgendamiento` (`cod_UsuAgenda`),
+  CONSTRAINT `CodBooking` FOREIGN KEY (`cod_UsuAgenda`) REFERENCES `agendamiento` (`cod_Age`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `usarioBooked` FOREIGN KEY (`cod_usu`) REFERENCES `usuario` (`cod_usu`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci</sql_create_table>
+</table>
+<table name="agendamiento" view="standard">
+<left>876</left>
+<top>98</top>
+<width>220</width>
+<height>197</height>
+<sql_create_table>CREATE TABLE `agendamiento` (
+  `cod_Age` int(15) NOT NULL AUTO_INCREMENT COMMENT '(PK)codigo agendamiento creado por cada empresa',
+  `cod_emp` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(FK)rut empresa que realiza agendamientos',
+  `cod_UsuSoli` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(FK)rut usuario que agenda',
+  `motivo` varchar(250) COLLATE utf8_spanish_ci NOT NULL COMMENT 'Motivo de agendamiento',
+  `fecha` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT 'fecha agendada',
+  `hora` varchar(8) COLLATE utf8_spanish_ci NOT NULL COMMENT 'hora agendada',
+  `estado` varchar(10) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'dos estados : Agendado o Realizado',
+  PRIMARY KEY (`cod_Age`),
+  KEY `FK_AgendamientoEmpresa` (`cod_emp`),
+  KEY `FK_AgendamientoUsuAgen` (`cod_UsuSoli`),
+  CONSTRAINT `codigoEmpresa` FOREIGN KEY (`cod_emp`) REFERENCES `empresa` (`cod_emp`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci</sql_create_table>
+</table>
+<table name="empresa" view="standard">
+<left>561</left>
+<top>204</top>
+<width>226</width>
+<height>146</height>
+<sql_create_table>CREATE TABLE `empresa` (
+  `cod_emp` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(PK)rut empresa',
+  `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `dir` varchar(50) COLLATE utf8_spanish_ci NOT NULL COMMENT 'direccion local de cada Empresa',
+  `rubro` varchar(100) COLLATE utf8_spanish_ci NOT NULL COMMENT 'descripcion rubro de la empresa',
+  PRIMARY KEY (`cod_emp`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci</sql_create_table>
+</table>
+<table name="usuario" view="standard">
+<left>281</left>
+<top>51</top>
+<width>207</width>
+<height>231</height>
+<sql_create_table>CREATE TABLE `usuario` (
+  `cod_usu` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(PK) rut usuario,sin puntos ni guion',
+  `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `apellido` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `date_ini` varchar(15) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'fecha inicio acceso',
+  `date_fin` varchar(15) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'fecha fin acceso',
+  `pwd` int(8) DEFAULT NULL COMMENT 'password acceso a sistema',
+  `cod_TipPer` int(5) NOT NULL COMMENT '(FK)codigo tipo perfil de usuario',
+  `cod_emp` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(FK)rut empresa de usuario',
+  `correo` varchar(30) COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`cod_usu`),
+  KEY `FK_usuarioEmpresa` (`cod_emp`),
+  KEY `FK_usuarioPerfil` (`cod_TipPer`),
+  CONSTRAINT `CodEmpresa` FOREIGN KEY (`cod_emp`) REFERENCES `empresa` (`cod_emp`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `perfilUser` FOREIGN KEY (`cod_TipPer`) REFERENCES `tipoperfil` (`cod_per`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>
