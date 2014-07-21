@@ -51,7 +51,9 @@ class GuardiaController extends BaseController {
         $ListaEmpresa = $this->modelGetData->getListEmpresa();
 
         $emp = $_POST["listaEmpresas"];
-        $fecha = $_POST["fechaVisits"];
+        $fecha = $_POST['fechaVisits'];
+        //$fecha = date('Y/m/d',strtotime($_POST['fechaVisits']));
+
 
         $listVisit = $this->modelGetData->getVisitsEmpresa($emp,$fecha);
 

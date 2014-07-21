@@ -25,6 +25,9 @@ class OperadorDocController extends BaseController {
         $this->modelGetData = $this->loadModels('getDatos');
         $this->modelUpdateData = $this->loadModels('updateDatos');
 
+
+
+
         $this->user = $_SESSION["usuarioActual"];
         $this->perfil = $_SESSION["perfil"];
 
@@ -107,14 +110,74 @@ class OperadorDocController extends BaseController {
 
     public function reportPdfAction()
     {
-        //$name = $this->getNameOperator();
+        $base_perfil = $this->perfil;
 
-        $this->pdf->AddPage();
-        $this->pdf->SetFont('Arial','B',16);
-        $this->pdf->Cell(16,10,utf8_decode('Hola:'),0);
-        $this->pdf->Ln();
-        //$this->pdf->Cell(190,10, utf8_decode($name),0,1,'C');
-        $this->pdf->Output();
+        $empresa    = $_POST["listaEmpresas"];
+        $desde      = $_POST["fecha_desde"];
+        $hasta      = $_POST["fecha_hasta"];
+
+        $datosSolicitante  = $this->modelGetData->getDataAplicant($desde,$hasta,$empresa);
+        $datosVisitantes   = $this->modelGetData->getDataVisits($desde,$hasta,$empresa);
+
+        if(count($datosSolicitante) == 0){
+            echo "<script>alert('No hay datos para la empresa o rango de fecha seleccionada')</script>
+                      <script>window.location='../$base_perfil'</script>";
+        }
+        else
+        {
+            $this->pdf->AddPage();
+            $this->pdf->SetFont('Arial','B',12);
+            $this->pdf->Cell(190,10,utf8_decode('Datos Solicitante'),1,1,'C');
+
+            $this->pdf->Cell(10,10,utf8_decode('N°'),1,0,'C');
+            $this->pdf->Cell(25,10,utf8_decode('Rut'),1,0,'C');
+            $this->pdf->Cell(90,10,utf8_decode('Motivo'),1,0,'C');
+            $this->pdf->Cell(20,10,utf8_decode('Fecha'),1,0,'C');
+            $this->pdf->Cell(17,10,utf8_decode('Hora'),1,0,'C');
+            $this->pdf->Cell(28,10,utf8_decode('Estado Visita'),1,0,'C');
+            $this->pdf->Ln();
+            $this->pdf->SetFont('Arial','',10);
+            for($i = 0 ; $i < count($datosSolicitante) ; $i++)
+            {
+                $this->pdf->Cell(10,10,utf8_decode($datosSolicitante[$i]['num']),1,0,'C');
+                $this->pdf->Cell(25,10,utf8_decode($datosSolicitante[$i]['rut_Solicitante']),1,0,'C');
+                $this->pdf->Cell(90,10,utf8_decode($datosSolicitante[$i]['motivo']),1,0,'C');
+                $this->pdf->Cell(20,10,utf8_decode($datosSolicitante[$i]['fecha']),1,0,'C');
+                $this->pdf->Cell(17,10,utf8_decode($datosSolicitante[$i]['hora'] . ' hrs.'),1,0,'C');
+                $this->pdf->Cell(28,10,utf8_decode($datosSolicitante[$i]['estado_Visita']),1,0,'C');
+                $this->pdf->Ln();
+
+            }
+            $this->pdf->Ln();
+            $this->pdf->Ln();
+
+            $this->pdf->SetFont('Arial','B',12);
+            $this->pdf->Cell(133,10,utf8_decode('Datos de Visitantes'),1,1,'C');
+            $this->pdf->Cell(10,10,utf8_decode('N°'),1,0,'C');
+            $this->pdf->Cell(25,10,utf8_decode('Rut'),1,0,'C');
+            $this->pdf->Cell(35,10,utf8_decode('Nombre'),1,0,'C');
+            $this->pdf->Cell(35,10,utf8_decode('Apellido'),1,0,'C');
+            $this->pdf->Cell(28,10,utf8_decode('Estado Visita'),1,0,'C');
+            $this->pdf->Ln();
+
+            $this->pdf->SetFont('Arial','',10);
+            for($i = 0 ; $i < count($datosVisitantes) ; $i++)
+            {
+                $this->pdf->Cell(10,10,utf8_decode($datosVisitantes[$i]['numero']),1,0,'C');
+                $this->pdf->Cell(25,10,utf8_decode($datosVisitantes[$i]['Rut_Usuario']),1,0,'C');
+                $this->pdf->Cell(35,10,utf8_decode($datosVisitantes[$i]['nombre']),1,0,'C');
+                $this->pdf->Cell(35,10,utf8_decode($datosVisitantes[$i]['apellido']),1,0,'C');
+                $this->pdf->Cell(28,10,utf8_decode($datosVisitantes[$i]['estado_Visita']),1,0,'C');
+                $this->pdf->Ln();
+
+            }
+
+
+            //$this->pdf->Output("reporte.pdf","D");
+            $this->pdf->Output();
+
+        }
+
     }
 
 

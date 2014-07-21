@@ -28,11 +28,11 @@
         <div class="desde_hasta">
             <div id="reportDesde" title="Reporte Desde: " >
                 <label for="fechaDesde" class="block">Desde</label>
-                <input type="text" id="fechaDesde" class="calendar" title="Inicio vigencia perfil" required/>
+                <input type="text" id="fechaDesde" class="calendar" name="fecha_desde" title="Inicio vigencia perfil" required/>
             </div>
             <div id="reportHasta" title="Reporte Hasta: ">
                 <label for="fechaHasta" class="block">Hasta</label>
-                <input type="text" id="fechaHasta" class="calendar" title="Inicio vigencia perfil" required/>
+                <input type="text" id="fechaHasta" class="calendar" name="fecha_hasta" title="Inicio vigencia perfil" required/>
             </div>
         </div>
 

@@ -1,9 +1,8 @@
 /*
 SQLyog Ultimate v9.02 
-MySQL - 5.6.16 : Database - systemaccesocontrol
+MySQL - 5.5.32 : Database - systemaccesocontrol
 *********************************************************************
-*/
-
+*/
 
 /*!40101 SET NAMES utf8 */;
 
@@ -39,7 +38,7 @@ CREATE TABLE `agendamiento` (
 
 LOCK TABLES `agendamiento` WRITE;
 
-insert  into `agendamiento`(`cod_Age`,`cod_emp`,`cod_UsuSoli`,`motivo`,`fecha`,`hora`,`estado`) values (1,'71951753-4','10394585-2','ingreso de equipos','20/02/2014','12:00','agendado'),(2,'71951753-4','9175545-9','inspección trabajos','27/03/2014','15:00','agendado'),(3,'88381200-k','12687705-6','revisiones tecnicas','04/07/2014','08:45','realizado'),(4,'88381200-k','23569552-9','instalacion de sistema operativo en servidor','12/03/2014','18:00','agendado'),(5,'71951753-4','14050197-2','inspeccion tecnica','05/01/2014','19:15','agendado'),(6,'76125652-4','16219704-5','instalacion de firewall','15/02/2014','10:45','realizado'),(7,'76125652-4','5568487-1','correccion de trabajos','02/07/2014','15:20','agendado'),(8,'71951753-4','6855283-4','inspeccion','16/03/2014','13:25','realizado'),(9,'89456123-5','9175545-9','inspeccion','13/04/2014','15:35','realizado');
+insert  into `agendamiento`(`cod_Age`,`cod_emp`,`cod_UsuSoli`,`motivo`,`fecha`,`hora`,`estado`) values (1,'71951753-4','10394585-2','ingreso de equipos','2014/02/20','12:00','agendado'),(2,'71951753-4','9175545-9','inspección trabajos','2014/03/27','15:00','agendado'),(3,'88381200-k','12687705-6','revisiones tecnicas','2014/07/04','08:45','realizado'),(4,'88381200-k','23569552-9','instalacion de sistema operativo en servidor','2014/03/12','18:00','agendado'),(5,'71951753-4','14050197-2','inspeccion tecnica','2014/01/05','19:15','agendado'),(6,'76125652-4','16219704-5','instalacion de firewall','2014/02/15','10:45','realizado'),(7,'76125652-4','5568487-1','correccion de trabajos','2014/07/02','15:20','agendado'),(8,'71951753-4','6855283-4','inspeccion','2014/03/16','13:25','realizado'),(9,'89456123-5','9175545-9','inspeccion','2014/04/13','15:35','realizado');
 
 UNLOCK TABLES;
 
@@ -77,7 +76,7 @@ CREATE TABLE `tipoperfil` (
 
 LOCK TABLES `tipoperfil` WRITE;
 
-insert  into `tipoperfil`(`cod_per`,`nombre`) values (1,'DOC'),(2,'Administrador'),(3,'Tecnico'),(4,'Guardia');
+insert  into `tipoperfil`(`cod_per`,`nombre`) values (1,'DOC'),(2,'Administrador'),(3,'Tecnico'),(4,'Guardia'),(5,'Externos');
 
 UNLOCK TABLES;
 
@@ -106,21 +105,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 
-INSERT  INTO `usuario`(`cod_usu`,`nombre`,`apellido`,`date_ini`,`date_fin`,`pwd`,`cod_TipPer`,`cod_emp`,`correo`) 
-VALUES ('10.394.585-2','Fabiola','Reyes','12/01/2014','12/12/2015','763813','3','89456123-5','freyes@rhelec.com'),
-('12.687.705-6','Brady','Beard','16/05/2014','12/10/2017','874566','1','88381200-k','bradyb@clarochile.com'),
-('14.050.197-2','Albeiro Andres','Gomez Pinilla','01/03/2014','01/04/2017','789456','2','71951753-4','albeiro@ibm.com'),
-('14.345.162-3','Jerk','Taylor','14/02/2014','12/12/2017','748438','1','88381200-k','jtaylor@clarochile.com'),
-('15.900.780-4','Finn','Roller','15/04/2014','12/12/2014','486541','4','88381200-k','froller@clarochile.com'),
-('16.219.704-5','Camilo Jose','Díaz Cordova','01/06/2014','01/05/2016','456789','2','76125652-4','cjose@emerson.com'),
-('21.125.608-7','Jose','Muñoz','10/05/2014','01/01/2018','145628','2','88381200-k','josemunoz@clarochile.com'),
-('23.569.552-9','Diego Alberto','Arguello Ardila','01/01/2014','12/12/2015','123456','1','88381200-k','darguello@clarochile.com'),
-('5.072.865-k','Cade','Mcgary','12/03/2014','12/12/2017','4935465','1','88381200-k','cadem@clarochile.com'),
-('5.568.487-1','Fabio','Castel','16/03/2014','09/12/2018','471397','3','76125652-4','fcastel@emerson.com'),
-('6.855.283-4','Francisco','Montes','05/02/2014','09/07/2015','458132','3','71951753-4','fmontes@ibm.com'),
-('7.900.646-7','Jose','Torres','14/01/2014','12/08/2018','48136','1','88381200-k','joset@clarochile.com'),
-('8.917.837-1','Patricio','britto','17/03/2014','12/12/2019','467159','3','88381200-k','pbritto@clarochile.com'),
-('9.175.545-9','Maria Jose','Lopez Aedo','01/01/2013','08/10/2016','987186','2','89456123-5','mariala@rhelec.com');
+insert  into `usuario`(`cod_usu`,`nombre`,`apellido`,`date_ini`,`date_fin`,`pwd`,`cod_TipPer`,`cod_emp`,`correo`) values ('10.394.585-2','Fabiola','Reyes','2014/01/12','2015/12/14',763813,3,'89456123-5','freyes@rhelec.com'),('12.687.705-6','Brady','Beard','2014/05/16','2017/10/12',874566,1,'88381200-k','bradyb@clarochile.com'),('14.050.197-2','Albeiro Andres','Gomez Pinilla','2014/03/01','2017/04/01',789456,2,'71951753-4','albeiro@ibm.com'),('14.345.162-3','Jerk','Taylor','2014/02/14','2017/12/12',748438,1,'88381200-k','jtaylor@clarochile.com'),('15.900.780-4','Finn','Roller','2014/04/15','2014/12/12',486541,4,'88381200-k','froller@clarochile.com'),('16.219.704-5','Camilo Jose','Díaz Cordova','2014/06/01','2016/05/01',456789,2,'76125652-4','cjose@emerson.com'),('18.047.765-9','Jose','Muñoz','2014/05/10','2018/01/01',145628,2,'88381200-k','josemunoz@clarochile.com'),('23.569.552-9','Diego Alberto','Arguello Ardila','2014/01/01','2015/12/12',123456,1,'88381200-k','darguello@clarochile.com'),('5.072.865-k','Cade','Mcgary','2014/03/12','2017/12/12',4935465,1,'88381200-k','cadem@clarochile.com'),('5.568.487-1','Fabio','Castel','2014/03/16','2018/12/09',471397,3,'76125652-4','fcastel@emerson.com'),('6.855.283-4','Francisco','Montes','2014/02/05','2015/07/09',458132,3,'71951753-4','fmontes@ibm.com'),('7.900.646-7','Jose','Torres','2014/01/14','2018/08/12',48136,1,'88381200-k','joset@clarochile.com'),('8.917.837-1','Patricio','britto','2014/03/17','2019/12/14',467159,3,'88381200-k','pbritto@clarochile.com'),('9.175.545-9','Maria Jose','Lopez Aedo','2013/01/01','2016/10/08',987186,2,'89456123-5','mariala@rhelec.com');
 
 UNLOCK TABLES;
 
@@ -131,9 +116,7 @@ DROP TABLE IF EXISTS `usuarioagendado`;
 CREATE TABLE `usuarioagendado` (
   `cod_UsuAgenda` int(15) NOT NULL COMMENT '(FK) codigo registro agendamiento realizado por empresa',
   `cod_usu` varchar(15) COLLATE utf8_spanish_ci NOT NULL COMMENT '(FK) rut usuario que visita',
-  `estado` varchar(10) COLLATE utf8_spanish_ci NOT NULL COMMENT 'dos estados:Asiste - NoAsiste',
-  `hr_ent` varchar(8) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'hora entrada usuario agendado',
-  `hr_sal` varchar(8) COLLATE utf8_spanish_ci DEFAULT NULL COMMENT 'hora salida usuario agendado',
+  `estadou` varchar(10) COLLATE utf8_spanish_ci NOT NULL COMMENT 'dos estados:Asiste - NoAsiste',
   KEY `FK_UsuarioAgendado` (`cod_usu`),
   KEY `FK_UsuAgenAgendamiento` (`cod_UsuAgenda`),
   CONSTRAINT `CodBooking` FOREIGN KEY (`cod_UsuAgenda`) REFERENCES `agendamiento` (`cod_Age`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -144,7 +127,7 @@ CREATE TABLE `usuarioagendado` (
 
 LOCK TABLES `usuarioagendado` WRITE;
 
-insert  into `usuarioagendado`(`cod_UsuAgenda`,`cod_usu`,`estado`,`hr_ent`,`hr_sal`) values (1,'10.394.585-2','realizado','12:30','22:35'),(1,'14.050.197-2','realizado','13:00','20:40'),(1,'6.855.283-4','realizado','13:20','18:45'),(2,'9.175.545-9','realizado','18:35','23:00'),(3,'12.687.705-6','realizado','16:25','22:00'),(3,'14.345.162-3','agendado',NULL,NULL),(3,'15.900.780-4','realizado','16:00','18:00'),(3,'21.125.608-7','realizado','18:35','22:00'),(3,'23.569.552-9','agendado',NULL,NULL),(3,'5.072.865-k','realizado','18:00','23:25'),(4,'23.569.552-9','realizado','13:00','19:00'),(4,'12.687.705-6','realizado','15:45','20:20'),(4,'14.345.162-3','agendado','',''),(5,'14.050.197-2','realizado','16:45','16:50'),(5,'16.219.704-5','realizado','19:20','23:00'),(5,'5.568.487-1','realizado','14:16','19:25'),(6,'16.219.704-5','realizado','14:00','19:25'),(7,'5.568.487-1','realizado','13:45','20:25'),(8,'6.855.283-4','realizado','15:24','19:36'),(9,'9.175.545-9','realizado','16:45','20:50');
+insert  into `usuarioagendado`(`cod_UsuAgenda`,`cod_usu`,`estadou`) values (1,'10.394.585-2','realizado'),(1,'14.050.197-2','agendado'),(1,'6.855.283-4','realizado'),(2,'9.175.545-9','agendado'),(3,'12.687.705-6','realizado'),(3,'14.345.162-3','agendado'),(3,'15.900.780-4','realizado'),(3,'18.047.765-9','agendado'),(3,'23.569.552-9','agendado'),(3,'5.072.865-k','realizado'),(4,'23.569.552-9','realizado'),(4,'12.687.705-6','agendado'),(4,'14.345.162-3','agendado'),(5,'14.050.197-2','realizado'),(5,'16.219.704-5','agendado'),(5,'5.568.487-1','agendado'),(6,'16.219.704-5','agendado'),(7,'5.568.487-1','realizado'),(8,'6.855.283-4','agendado'),(9,'9.175.545-9','realizado');
 
 UNLOCK TABLES;
 
