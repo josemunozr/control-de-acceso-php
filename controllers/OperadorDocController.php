@@ -5,7 +5,7 @@ class OperadorDocController extends BaseController {
     protected $nameController = "operadorDoc";
     protected $user;
     protected $perfil;
-    //vars index
+
     protected  $name;
     protected  $empresa;
     protected  $correo;
@@ -14,6 +14,7 @@ class OperadorDocController extends BaseController {
     protected $modelHome;
     protected $modelSetData;
     protected $modelGetData;
+    protected $modelUpdateData;
 
     public function __construct()
     {
@@ -22,12 +23,10 @@ class OperadorDocController extends BaseController {
         $this->modelHome = $this->loadModels('datosHome');
         $this->modelSetData = $this->loadModels('setDatos');
         $this->modelGetData = $this->loadModels('getDatos');
-
+        $this->modelUpdateData = $this->loadModels('updateDatos');
 
         $this->user = $_SESSION["usuarioActual"];
         $this->perfil = $_SESSION["perfil"];
-
-
 
         $this->getLibrary('fpdf');
         $this->pdf = new FPDF();
@@ -74,7 +73,27 @@ class OperadorDocController extends BaseController {
 
     public function viewVisitsAction()
     {
-        return new View('viewVisits',$this->getNameController() );
+
+        $base_perfil = $this->perfil;
+
+
+        $emp = $_POST["listaEmpresas"];
+        $fecha = $_POST["fechaVisits"];
+
+        $listVisit = $this->modelGetData->getVisitsEmpresa($emp,$fecha);
+
+        if(count($listVisit) == 0)
+        {
+            echo "<script>alert('No existe visitas para la Empresa o dia Consultada')</script>
+                  <script>window.location='../$base_perfil'</script>";
+        }
+        else
+        {
+            return new View('viewVisits', $this->getNameController(),[
+                'listVisits' => $listVisit
+
+            ]);
+        }
     }
 
     public function reportsAction()
@@ -88,15 +107,16 @@ class OperadorDocController extends BaseController {
 
     public function reportPdfAction()
     {
-        $name = $this->getNameOperator();
+        //$name = $this->getNameOperator();
 
         $this->pdf->AddPage();
         $this->pdf->SetFont('Arial','B',16);
         $this->pdf->Cell(16,10,utf8_decode('Hola:'),0);
         $this->pdf->Ln();
-        $this->pdf->Cell(190,10, utf8_decode($name),0,1,'C');
+        //$this->pdf->Cell(190,10, utf8_decode($name),0,1,'C');
         $this->pdf->Output();
     }
+
 
 
     public function newUserAction()
@@ -173,6 +193,52 @@ class OperadorDocController extends BaseController {
 
     }
 
+    public function modifyDataAction()
+    {
+        $base_perfil = $this->perfil;
+
+        $rut = $_POST["rutUsuario"];
+        $nombre = $_POST["nombreUsuario"];
+        $apellido = $_POST["apellidoUsuario"];
+        $tipoPerfil = $_POST["tipoPerfil"];
+        $fechaInicio = $_POST["fechaInicio"];
+        $fechaFin = $_POST["fechaFin"];
+        $tipoModificacion = $_POST["tipoModificacion"];
+
+
+        if($tipoModificacion == "rut")
+        {
+            $estado = $this->modelUpdateData->modifyUserByRut($tipoPerfil,$fechaInicio,$fechaFin,$rut);
+
+            if($estado == true)
+            {
+                echo "<script>alert('Datos Modificados correctamente')</script>
+                  <script>window.location='../$base_perfil'</script>";
+            }
+            else
+            {
+                echo "<script>alert('Se ha producido un error al modificar datos, Favor contactar a administrador')</script>
+                  <script>window.location='../$base_perfil'</script>";
+            }
+
+        }
+        elseif($tipoModificacion == "NomApe")
+        {
+           $estado =  $this->modelUpdateData->modifyUserByNomApe($tipoPerfil,$fechaInicio,$fechaFin,$nombre,$apellido);
+
+            if($estado == true)
+            {
+                echo "<script>alert('Datos Modificados correctamente')</script>
+                  <script>window.location='../$base_perfil'</script>";
+            }
+            else
+            {
+                echo "<script>alert('Se ha producido un error al modificar datos, Favor contactar a administrador')</script>
+                  <script>window.location='../$base_perfil'</script>";
+            }
+        }
+    }
+
 
     /*
      * GETTER
@@ -190,14 +256,11 @@ class OperadorDocController extends BaseController {
         return $dato['nombre'] . " " . $dato['apellido'];
     }
 
-
     public function getEmpresa()
     {
         $dato = $this->modelHome->getNombreEmpresaUser($this->user);
         return $dato['nombre'];
     }
-
-
 
     public function getNameController()
     {

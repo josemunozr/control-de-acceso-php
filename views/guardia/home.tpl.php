@@ -2,9 +2,17 @@
     <ul>
         <li><a href="#">Inicio</a></li>
         <form id="calendarGuardia" action="guardia/viewVisits" method="post">
+
+            <select name="listaEmpresas" id="listaEmpresas">
+                <option SELECTED>Seleccione Empresa</option>
+                <?php foreach ($listEmpresa as $valor) { ?>
+                    <option value="<?= $valor['cod_emp']?>"><?= $valor['nombre']?></option>
+                <?php } ?>
+            </select>
+
             <div id="calendarVisits" title="Lista de visitantes por día">
                 <label for="date" class="block"	>Visita</label>
-                <input type="text" id="date" class="calendar"  required/>
+                <input type="text" id="date" class="calendar" name="fechaVisits" required/>
             </div>
             <input type="submit" value="Consutar"/>
         </form>

@@ -25,6 +25,8 @@ class setDatosModel extends Model {
 
                 ));
 
+
+
         return $sql;
 
 
@@ -75,8 +77,8 @@ class setDatosModel extends Model {
 
             //var_dump($sql_usuario);
 
-            $sql_usuarioAgendado = $this->_db->prepare("INSERT INTO UsuarioAgendado (cod_UsuAgenda,cod_usu,estado,hr_ent,hr_sal)
-                                                    VALUES (:codAgendamiento,:rutUsuario,'agendado',NULL,NULL)")
+            $sql_usuarioAgendado = $this->_db->prepare("INSERT INTO UsuarioAgendado (cod_UsuAgenda,cod_usu,estadou)
+                                                    VALUES (:codAgendamiento,:rutUsuario,'agendado')")
                              ->execute(array(
 
                                     ':codAgendamiento' => $codAgen["cod_Age"],

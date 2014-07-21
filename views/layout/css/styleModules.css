@@ -13,6 +13,11 @@ input[type=submit]
     right: 12em;*/
 
 }
+input[type=checkbox]
+{
+    width: 25px;
+    height: 25px;
+}
 
 section form
 {
@@ -69,10 +74,13 @@ table,tr,td
 {
     border: 1px dotted grey;
 }
-
+table th
+{
+    border-right: 1px solid grey;
+}
 tr,td
 {
-    padding: 2em 3em;
+    padding: 1em 2em;
 }
 
 #addUser
@@ -208,6 +216,12 @@ tr,td
     margin: 2em auto;
 
 }
+#datosVisitas #titleTable
+{
+    background: linear-gradient(0deg, #202020 0%,#444444 100%);
+    color: white;
+    text-shadow: black 2px 2px 2px;
+}
 
 #visitasDelDia h3
 {
@@ -238,6 +252,8 @@ tr,td
 {
     color: white;
 }
+
+
 
 .clearForm
 {

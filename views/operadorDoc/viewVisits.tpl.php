@@ -16,48 +16,20 @@
 <section id="visits">
     <h3>Lista de Visitas Realizadas</h3>
     <table id="datosVisitas">
-        <tr>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
+        <tr id="titleTable">
+            <th>Rut</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Empresa</th>
         </tr>
-        <tr>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-        </tr>
-        <tr>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-        </tr>
-        <tr>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-        </tr>
-        <tr>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-        </tr>
-        <tr>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-            <td>Datos</td>
-        </tr>
+        <?php for($i=0; $i<count($listVisits); $i++):  ?>
+            <tr>
+                <td><?= $listVisits[$i]['rutUsuario']; ?></td>
+                <td><?= $listVisits[$i]['nombre']; ?></td>
+                <td><?= $listVisits[$i]['apellido']; ?></td>
+                <td><?= $listVisits[$i]['nombreEmpresa']; ?></td>
+            </tr>
+        <?php endfor; ?>
     </table>
 
 </section>

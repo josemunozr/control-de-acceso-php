@@ -44,7 +44,7 @@
             </div>
             <div class="item_nomEmpresa inlineBlock">
                 <label for="empresa" class="block">Empresa</label>
-                <input type="text" id="empresa" name="nombreEmpresa" required/>
+                <input type="text" id="empresa" name="nombreEmpresa" placeholder="Ingrese Rut Empresa" required/>
             </div>
             <div class="passUser inlineBlock">
                 <label for="passUser" class="block">Contraseña</label>

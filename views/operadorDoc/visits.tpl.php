@@ -29,7 +29,7 @@
         </div>
         <div class="diaVisita">
             <label for="diaVisits" class="block">Día</label>
-            <input type="text"  class="calendar"  required/>
+            <input type="text"  class="calendar"  name="fechaVisits" required/>
 
         </div>
 

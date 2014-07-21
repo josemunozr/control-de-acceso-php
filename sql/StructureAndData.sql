@@ -2,7 +2,8 @@
 SQLyog Ultimate v9.02 
 MySQL - 5.6.16 : Database - systemaccesocontrol
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -105,7 +106,21 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 
-insert  into `usuario`(`cod_usu`,`nombre`,`apellido`,`date_ini`,`date_fin`,`pwd`,`cod_TipPer`,`cod_emp`,`correo`) values ('10.394.585-2','Fabiola','Reyes','12/01/2014','12/12/2015',763813,3,'89456123-5','freyes@rhelec.com'),('12.687.705-6','Brady','Beard','16/05/2014','12/10/2017',874566,1,'88381200-k','bradyb@clarochile.com'),('14.050.197-2','Albeiro Andres','Gomez Pinilla','01/03/2014','01/04/2017',789456,2,'71951753-4','albeiro@ibm.com'),('14.345.162-3','Jerk','Taylor','14/02/2014','12/12/2017',748438,1,'88381200-k','jtaylor@clarochile.com'),('15.900.780-4','Finn','Roller','15/04/2014','12/12/2014',486541,4,'88381200-k','froller@clarochile.com'),('16.219.704-5','Camilo Jose','Díaz Cordova','01/06/2014','01/05/2016',456789,2,'76125652-4','cjose@emerson.com'),('21.125.608-7','Jose','Muñoz','10/05/2014','01/01/2018',145628,2,'88381200-k','josemunoz@clarochile.com'),('23.569.552-9','Diego Alberto','Arguello Ardila','01/01/2014','12/12/2015',123456,1,'88381200-k','darguello@clarochile.com'),('5.072.865-k','Cade','Mcgary','12/03/2014','12/12/2017',4935465,1,'88381200-k','cadem@clarochile.com'),('5.568.487-1','Fabio','Castel','16/03/2014','09/12/2018',471397,3,'76125652-4','fcastel@emerson.com'),('6.855.283-4','Francisco','Montes','05/02/2014','09/07/2015',458132,3,'71951753-4','fmontes@ibm.com'),('7.900.646-7','Jose','Torres','14/01/2014','12/08/2018',48136,1,'88381200-k','joset@clarochile.com'),('8.917.837-1','Patricio','britto','17/03/2014','12/12/2019',467159,3,'88381200-k','pbritto@clarochile.com'),('9.175.545-9','Maria Jose','Lopez Aedo','01/01/2013','08/10/2016',987186,2,'89456123-5','mariala@rhelec.com');
+INSERT  INTO `usuario`(`cod_usu`,`nombre`,`apellido`,`date_ini`,`date_fin`,`pwd`,`cod_TipPer`,`cod_emp`,`correo`) 
+VALUES ('10.394.585-2','Fabiola','Reyes','12/01/2014','12/12/2015','763813','3','89456123-5','freyes@rhelec.com'),
+('12.687.705-6','Brady','Beard','16/05/2014','12/10/2017','874566','1','88381200-k','bradyb@clarochile.com'),
+('14.050.197-2','Albeiro Andres','Gomez Pinilla','01/03/2014','01/04/2017','789456','2','71951753-4','albeiro@ibm.com'),
+('14.345.162-3','Jerk','Taylor','14/02/2014','12/12/2017','748438','1','88381200-k','jtaylor@clarochile.com'),
+('15.900.780-4','Finn','Roller','15/04/2014','12/12/2014','486541','4','88381200-k','froller@clarochile.com'),
+('16.219.704-5','Camilo Jose','Díaz Cordova','01/06/2014','01/05/2016','456789','2','76125652-4','cjose@emerson.com'),
+('21.125.608-7','Jose','Muñoz','10/05/2014','01/01/2018','145628','2','88381200-k','josemunoz@clarochile.com'),
+('23.569.552-9','Diego Alberto','Arguello Ardila','01/01/2014','12/12/2015','123456','1','88381200-k','darguello@clarochile.com'),
+('5.072.865-k','Cade','Mcgary','12/03/2014','12/12/2017','4935465','1','88381200-k','cadem@clarochile.com'),
+('5.568.487-1','Fabio','Castel','16/03/2014','09/12/2018','471397','3','76125652-4','fcastel@emerson.com'),
+('6.855.283-4','Francisco','Montes','05/02/2014','09/07/2015','458132','3','71951753-4','fmontes@ibm.com'),
+('7.900.646-7','Jose','Torres','14/01/2014','12/08/2018','48136','1','88381200-k','joset@clarochile.com'),
+('8.917.837-1','Patricio','britto','17/03/2014','12/12/2019','467159','3','88381200-k','pbritto@clarochile.com'),
+('9.175.545-9','Maria Jose','Lopez Aedo','01/01/2013','08/10/2016','987186','2','89456123-5','mariala@rhelec.com');
 
 UNLOCK TABLES;
 

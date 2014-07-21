@@ -131,18 +131,21 @@ function displayItem(){
     {
         $(".item_NomAppe").css({ display: "none"});
         $(".modified_rutUsuario").css({ display: "block"});
+        $("#tipoModificacion").attr("value","rut");
 
     }else if(type == "NomApe")
     {
 
        $(".modified_rutUsuario").css({ display: "none"});
        $(".item_NomAppe").css({ display: "block"});
+       $("#tipoModificacion").attr("value","NomApe");
 
 
     }else if(type == "")
     {
       $(".modified_rutUsuario").css({ display: "none"});
       $(".item_NomAppe").css({ display: "none"});
+     $("#tipoModificacion").attr("value","");
 
     }
 

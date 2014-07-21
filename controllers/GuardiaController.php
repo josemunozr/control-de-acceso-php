@@ -4,6 +4,7 @@ class GuardiaController extends BaseController {
 
     protected $nameController = "guardia";
     protected $user;
+    protected $perfil;
 
     //vars index
     protected $name;
@@ -11,24 +12,33 @@ class GuardiaController extends BaseController {
     protected $correo;
 
     protected $model;
+    protected $modelGetData;
 
     public function __construct()
     {
         session_start();
 
         $this->model = $this->loadModels('datosHome');
+        $this->modelGetData = $this->loadModels('getDatos');
+
+
+
         $this->user = $_SESSION["usuarioActual"];
+        $this->perfil = $_SESSION["perfil"];
     }
 
 
     public function indexAction()
     {
+        $ListaEmpresa = $this->modelGetData->getListEmpresa();
+
 
         return new View('home', $this->getNameController(), [
 
             'nombre' => $this->getName(),
             'correo' => $this->getCorreo(),
-            'empresa' => $this->getEmpresa()
+            'empresa' => $this->getEmpresa(),
+            'listEmpresa' => $ListaEmpresa
 
         ]);
 
@@ -36,7 +46,30 @@ class GuardiaController extends BaseController {
 
     public function viewVisitsAction()
     {
-        return new View('viewVisits', $this->getNameController());
+        $base_perfil = $this->perfil;
+
+        $ListaEmpresa = $this->modelGetData->getListEmpresa();
+
+        $emp = $_POST["listaEmpresas"];
+        $fecha = $_POST["fechaVisits"];
+
+        $listVisit = $this->modelGetData->getVisitsEmpresa($emp,$fecha);
+
+        if(count($listVisit) == 0)
+        {
+            echo "<script>alert('No existe visitas para la Empresa o dia Consultada')</script>
+                  <script>window.location='../$base_perfil'</script>";
+        }
+        else
+        {
+            return new View('viewVisits', $this->getNameController(),[
+                'listVisits' => $listVisit,
+                'listEmpresa' => $ListaEmpresa
+            ]);
+        }
+
+
+
     }
 
     /*
