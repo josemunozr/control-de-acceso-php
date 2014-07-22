@@ -6,7 +6,7 @@
 <section id="visitasDelDia">
     <h3>Lista de Visitas del día</h3>
 
-    <form id="formViewVisits" action="#" method="post">
+    <form id="formViewVisits" action="EstadoVisita" method="post">
         <table id="datosVisitas">
             <tr id="titleTable">
                 <th>Rut</th>
@@ -21,7 +21,7 @@
                     <td><?= $listVisits[$i]['nombre']; ?></td>
                     <td><?= $listVisits[$i]['apellido']; ?></td>
                     <td><?= $listVisits[$i]['nombreEmpresa']; ?></td>
-                    <td ><input type="checkbox" name="estadoVisita[]" class="check"/></td>
+                    <td ><input type="checkbox" name="rutUsuario[]" class="check" value="<?= $listVisits[$i]['rutUsuario']; ?>"/></td>
                 </tr>
             <?php endfor; ?>
 

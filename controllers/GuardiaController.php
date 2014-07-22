@@ -13,6 +13,7 @@ class GuardiaController extends BaseController {
 
     protected $model;
     protected $modelGetData;
+    protected $modelUpdatedata;
 
     public function __construct()
     {
@@ -20,6 +21,7 @@ class GuardiaController extends BaseController {
 
         $this->model = $this->loadModels('datosHome');
         $this->modelGetData = $this->loadModels('getDatos');
+        $this->modelUpdatedata = $this->loadModels('updateDatos');
 
 
 
@@ -48,7 +50,7 @@ class GuardiaController extends BaseController {
     {
         $base_perfil = $this->perfil;
 
-        $ListaEmpresa = $this->modelGetData->getListEmpresa();
+        //$ListaEmpresa = $this->modelGetData->getListEmpresa();
 
         $emp = $_POST["listaEmpresas"];
         $fecha = $_POST['fechaVisits'];
@@ -56,6 +58,7 @@ class GuardiaController extends BaseController {
 
 
         $listVisit = $this->modelGetData->getVisitsEmpresa($emp,$fecha);
+
 
         if(count($listVisit) == 0)
         {
@@ -65,8 +68,7 @@ class GuardiaController extends BaseController {
         else
         {
             return new View('viewVisits', $this->getNameController(),[
-                'listVisits' => $listVisit,
-                'listEmpresa' => $ListaEmpresa
+                'listVisits' => $listVisit
             ]);
         }
 
@@ -74,9 +76,21 @@ class GuardiaController extends BaseController {
 
     }
 
-    /*
-     * GETTERS
-     */
+    public function EstadoVisitaAction()
+    {
+
+        if ( ! empty($_POST['rutUsuario']) ) {
+            $user = $_POST['rutUsuario'];
+
+          //  $this->modelUpdatedata->modifyStatus($user);
+
+        }
+        else{
+
+
+        }
+
+    }
 
     public function getCorreo()
     {
@@ -84,16 +98,11 @@ class GuardiaController extends BaseController {
         return $dato['correo'];
     }
 
-    /**
-     * @return mixed
-     */
     public function getEmpresa()
     {
         $dato = $this->model->getNombreEmpresaUser($this->user);
         return $dato['nombre'];
     }
-
-
 
     public function getName()
     {
