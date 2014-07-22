@@ -116,6 +116,8 @@ class OperadorDocController extends BaseController {
         $desde      = $_POST["fecha_desde"];
         $hasta      = $_POST["fecha_hasta"];
 
+
+
         $datosSolicitante  = $this->modelGetData->getDataAplicant($desde,$hasta,$empresa);
         $datosVisitantes   = $this->modelGetData->getDataVisits($desde,$hasta,$empresa);
 
