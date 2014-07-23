@@ -59,7 +59,16 @@ class getDatosModel extends Model {
         return $sql->fetchAll();
     }
 
+    public function getVigenciaPerfil($usuario)
+    {
+        $sql = $this->_db->query("SELECT DATE_FORMAT(NOW(),'%Y/%m/%d') AS fechaActual, date_fin AS fechaTermino
+                                  FROM usuario
+                                  WHERE cod_usu = '$usuario'");
 
+
+
+        return $sql->fetch();
+    }
 
 
 }

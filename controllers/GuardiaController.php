@@ -54,8 +54,6 @@ class GuardiaController extends BaseController {
 
         $emp = $_POST["listaEmpresas"];
         $fecha = $_POST['fechaVisits'];
-        //$fechaF = date('Y/m/d',strtotime($_POST['fechaVisits']));
-
 
         $listVisit = $this->modelGetData->getVisitsEmpresa($emp,$fecha);
 
@@ -78,15 +76,19 @@ class GuardiaController extends BaseController {
 
     public function EstadoVisitaAction()
     {
+        $base_perfil = $this->perfil;
 
         if ( ! empty($_POST['rutUsuario']) ) {
             $user = $_POST['rutUsuario'];
 
-          //  $this->modelUpdatedata->modifyStatus($user);
+
+            $this->modelUpdatedata->modifyStatus($user);
+            echo "<script>window.location='../$base_perfil'</script>";
 
         }
         else{
 
+            echo "<script>window.location='../$base_perfil'</script>";
 
         }
 

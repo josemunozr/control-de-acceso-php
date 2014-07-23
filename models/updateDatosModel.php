@@ -46,12 +46,19 @@ class updateDatosModel extends Model {
 
     public function modifyStatus($usuario)
     {
-        $sql = $this->_db->prepare("UPDATE usuarioagendado
-                                    SET estadou = 'realizado'
-                                    WHERE cod_usu = :usuario")
-            ->execute(array(
-                ':usuario' => $usuario
-            ));
+        $sql="";
+
+        for($i = 0; $i<count($usuario); $i++)
+        {
+            $sql = $this->_db->prepare("UPDATE usuarioagendado, agendamiento
+                                    SET estadou = 'realizado', estado = 'realizado'
+                                    WHERE agendamiento.cod_Age = usuarioagendado.cod_UsuAgenda
+                                    AND cod_usu = :usuario")
+                ->execute(array(
+                    ':usuario' => $usuario[$i]
+                ));
+
+        }
 
         return $sql;
     }

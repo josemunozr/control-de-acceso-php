@@ -24,6 +24,8 @@ class AdministradorController extends BaseController {
     public function __construct()
     {
 
+
+
         session_start();
 
         $this->modelHome = $this->loadModels('datosHome');
@@ -103,8 +105,6 @@ class AdministradorController extends BaseController {
 
 
     }
-
-
 
     public function newVisitsAction()
     {
@@ -264,8 +264,8 @@ class AdministradorController extends BaseController {
             }
 
 
-            //$this->pdf->Output("reporte.pdf","D");
-            $this->pdf->Output();
+            $this->pdf->Output("reporte.pdf","D");
+//            $this->pdf->Output();
 
         }
 
