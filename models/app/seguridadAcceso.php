@@ -2,13 +2,16 @@
 
 $root = BASE_URL;
 
+
+
 if( ! session_id() ){
     session_start();
+
 }
 
 
 
-if ($_SESSION["autentificado"] != "SI") {
+if ( isset($_SESSION["autentificado"]) != "SI") {
 
     header("Location: $root");
     exit();
@@ -21,7 +24,7 @@ else{
     $tiempo_transcurrido = (strtotime($ahora)-strtotime($fechaGuardada));
 
 
-    if($tiempo_transcurrido >= 6000) {
+    if($tiempo_transcurrido >= 600) {
 
         session_destroy();
 

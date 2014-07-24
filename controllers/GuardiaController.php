@@ -25,8 +25,10 @@ class GuardiaController extends BaseController {
 
 
 
-        $this->user = $_SESSION["usuarioActual"];
-        $this->perfil = $_SESSION["perfil"];
+        if(isset($_SESSION["usuarioActual"]) && isset($_SESSION["perfil"])){
+            $this->user = $_SESSION["usuarioActual"];
+            $this->perfil = $_SESSION["perfil"];
+        }
     }
 
 

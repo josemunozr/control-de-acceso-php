@@ -20,8 +20,10 @@ class TecnicoController extends BaseController {
         $this->model = $this->loadModels('datosHome');
         $this->modelSetData = $this->loadModels('setDatos');
 
-        $this->user = $_SESSION["usuarioActual"];
-        $this->perfil = $_SESSION["perfil"];
+        if(isset($_SESSION["usuarioActual"]) && isset($_SESSION["perfil"])){
+            $this->user = $_SESSION["usuarioActual"];
+            $this->perfil = $_SESSION["perfil"];
+        }
     }
 
     public function indexAction(){

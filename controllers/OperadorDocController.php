@@ -28,8 +28,10 @@ class OperadorDocController extends BaseController {
 
 
 
-        $this->user = $_SESSION["usuarioActual"];
-        $this->perfil = $_SESSION["perfil"];
+        if(isset($_SESSION["usuarioActual"]) && isset($_SESSION["perfil"])){
+            $this->user = $_SESSION["usuarioActual"];
+            $this->perfil = $_SESSION["perfil"];
+        }
 
         $this->getLibrary('fpdf');
         $this->pdf = new FPDF();

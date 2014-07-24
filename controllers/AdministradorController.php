@@ -33,8 +33,12 @@ class AdministradorController extends BaseController {
         $this->modelGetData = $this->loadModels('getDatos');
         $this->modelUpdateData = $this->loadModels('updateDatos');
 
-        $this->user = $_SESSION["usuarioActual"];
-        $this->perfil = $_SESSION["perfil"];
+
+        if(isset($_SESSION["usuarioActual"]) && isset($_SESSION["perfil"])){
+            $this->user = $_SESSION["usuarioActual"];
+            $this->perfil = $_SESSION["perfil"];
+        }
+
 
 
         $this->getLibrary('fpdf');
