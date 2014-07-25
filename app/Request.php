@@ -97,9 +97,14 @@ class Request{
         $actionMethodName    = $this->getActionMethodName();
         $params              = $this->getParams();
 
+        $base = BASE_URL;
+
         if( ! file_exists($controllerFileName))
         {
-            exit("El controlador No Existe");
+            //exit("El controlador No Existe");
+
+                 header("Location:" . "$base" . "error");
+
         }
 
         require $controllerFileName;

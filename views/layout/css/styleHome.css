@@ -95,6 +95,44 @@ label
     width: 100%;
 }
 
+#errorPass
+{
+    width: 250px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 6em;
+    display: none;
+    text-shadow: 0 1px black;
+    color: white;
+    background: rgba(208, 46, 16, 0.9);
+
+}
+
+#errorUser
+{
+    width: 250px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 6em;
+    display: none;
+    text-shadow: 0 1px black;
+    color: white;
+    background: rgba(208, 46, 16, 0.9);
+}
+
+#errorAutorizacion
+{
+    width: 250px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 6em;
+    display: none;
+    text-shadow: 0 1px black;
+    color: white;
+    background: rgba(208, 46, 16, 0.9);
+    
+}
+
 #form
 {
     background: linear-gradient(0deg, #202020 0%,#444444 100%);

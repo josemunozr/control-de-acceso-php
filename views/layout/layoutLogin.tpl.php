@@ -17,7 +17,9 @@
 <!-- 	Script   -->
 
 <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery.js"></script>
+<script type="text/javascript" src="<?= BASE_URL?>views/layout/js/jquery.validator.Rut.js"></script>
 <script type="text/javascript" src="<?= BASE_URL?>views/layout/js/scriptLogin.js"></script>
+
 </div>
 </body>
 </html>

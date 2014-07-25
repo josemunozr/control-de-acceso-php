@@ -24,4 +24,8 @@ $(document).on("ready", function(){
 
     });
 
+    $(".rut").Rut({
+        format_on: 'keyup'
+    });
+
 });

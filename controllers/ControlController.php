@@ -69,21 +69,28 @@ class  ControlController extends BaseController {
                 }
                 else
                 {
-                    echo "<script>alert('Sin autorizacion para ingresar a sistema')</script>
+                    /*echo "<script>alert('Sin autorizacion para ingresar a sistema')</script>
                       <script>window.location='index.php'</script>";
+                    */
+                    header("Location: index.php?errorAutorizacion=true");
                 }
 
             }
             else
             {
-                echo "<script>alert('Contrase\u00f1a Incorrecta')</script>
+               /* echo "<script>alert('Contrase\u00f1a Incorrecta')</script>
                       <script>window.location='index.php'</script>";
+               <style>#error{display: block}</style>
+               */
+                header("Location: index.php?errorPass=true");
             }
         }
         else
         {
-            echo "<script>alert('Usuario Ingresado No existe')</script>
+            /*echo "<script>alert('Usuario Ingresado No existe')</script>
                   <script>window.location='index.php'</script>";
+            */
+            header("Location: index.php?errorUser=true");
         }
 
     }
