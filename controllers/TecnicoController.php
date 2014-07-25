@@ -72,13 +72,11 @@ class TecnicoController extends BaseController {
 
         if($setDatos == true)
         {
-            echo "<script>alert('Datos guardados correctamente')</script>
-                      <script>window.location='../$base_perfil'</script>";
+            header("Location: accessRequest?estado=true");
         }
         else
         {
-            echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
-                      <script>window.location='accessRequest'</script>";
+            header("Location: accessRequest?estado=false");
         }
 
 

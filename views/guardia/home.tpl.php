@@ -17,7 +17,15 @@
             <input type="submit" value="Consutar"/>
         </form>
     </ul>
+    <div id="msgGuardia"
+    <?php if($_GET["estado"] == "false"){?>
+    <span style="display: block">No existen visitas para la Empresa o dia Consultada</span>
+    <?php  }?>
+
+    </div>
 </nav>
+
+
 <section>
     <div class="item_inicio">
         <hgroup>

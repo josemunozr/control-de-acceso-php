@@ -103,7 +103,7 @@ class Request{
         {
             //exit("El controlador No Existe");
 
-                 header("Location:" . "$base" . "error");
+                 header("Location:" . "$base");
 
         }
 

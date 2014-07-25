@@ -65,6 +65,15 @@
         </div>
 
         <input type="submit" value="Enviar" />
+        <div id="msg"
+        <?php if($_GET["estado"] == "true"){?>
+            <span style="display: block">Datos guardados correctamente</span>
+        <?php }else{?>
+            <span style="display: block">Rut ingresado ya se encuentra en sistema</span>
+
+        <?php }?>
+
+        </div>
 
     </form>
 </section>

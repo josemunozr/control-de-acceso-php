@@ -28,7 +28,7 @@
             </div>
             <div class="item_motivoVisita ">
                 <label for="motivoVisita" class="block">Motivo Visita</label>
-                <textarea name="motivoVisita" id="motivoVisita" ></textarea>
+                <textarea name="motivoVisita" id="motivoVisita" ></textarea required>
             </div>
             <div class="item_horaVisita">
                 <label for="time" class="block">Hora Visita</label>
@@ -66,5 +66,16 @@
                 <a href="#">Limpiar</a>
             </div>
 
+            <div id="msgVisita"
+            <?php if($_GET["estado"] == "true"){?>
+            <span style="display: block">Datos guardados correctamente</span>
+            <?php }else{?>
+            <span style="display: block">Error al intentar agendar visita</span>
+
+            <?php }?>
+
+            </div>
         </form>
+
+
     </section>

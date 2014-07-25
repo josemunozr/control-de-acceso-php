@@ -62,8 +62,7 @@ class GuardiaController extends BaseController {
 
         if(count($listVisit) == 0)
         {
-            echo "<script>alert('No existe visitas para la Empresa o dia Consultada')</script>
-                  <script>window.location='../$base_perfil'</script>";
+            header("Location: ../$base_perfil?estado=false");
         }
         else
         {

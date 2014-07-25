@@ -63,6 +63,14 @@
             <div class="clearForm">
                 <a href="#">Limpiar</a>
             </div>
+            <div id="msgVisita"
+            <?php if($_GET["estado"] == "true"){?>
+                <span style="display: block">Datos guardados correctamente</span>
+            <?php }else{?>
+                <span style="display: block">Error al intentar agendar visita</span>
 
+            <?php }?>
+
+            </div>
         </form>
     </section>

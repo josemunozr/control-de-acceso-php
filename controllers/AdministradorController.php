@@ -98,13 +98,18 @@ class AdministradorController extends BaseController {
         $insert =   $this->modelSetData->addUser($user,$nombre,$apellido,$dateIni,$dateFin,$pass,$tipoPerfil,$codEmp,$correo);
 
         if($insert == true){
-            echo "<script>alert('Datos guardados correctamente')</script>
+        /*            echo "<script>alert('Datos guardados correctamente')</script>
                       <script>window.location='../$base_perfil'</script>";
+
+        */
+            header("Location: addUser?estado=true");
         }
         else
         {
-            echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
+           /* echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
                       <script>window.location='addUser'</script>";
+           */
+            header("Location: addUser?estado=false");
         }
 
 
@@ -140,13 +145,11 @@ class AdministradorController extends BaseController {
 
         if($setDatos == true)
         {
-            echo "<script>alert('Datos guardados correctamente')</script>
-                      <script>window.location='../$base_perfil'</script>";
+            header("Location: accessRequest?estado=true");
         }
         else
         {
-            echo "<script>alert('Datos ingresados ya se encuentran en Sistema')</script>
-                      <script>window.location='accessRequest'</script>";
+            header("Location: accessRequest?estado=false");
         }
 
 
@@ -171,13 +174,11 @@ class AdministradorController extends BaseController {
 
             if($estado == true)
             {
-                echo "<script>alert('Datos Modificados correctamente')</script>
-                  <script>window.location='../$base_perfil'</script>";
+                header("Location: modifyUser?msgModify=true");
             }
             else
             {
-                echo "<script>alert('Se ha producido un error al modificar datos, Favor contactar a administrador')</script>
-                  <script>window.location='../$base_perfil'</script>";
+                header("Location: modifyUser?msgModify=false");
             }
 
         }
@@ -187,13 +188,11 @@ class AdministradorController extends BaseController {
 
             if($estado == true)
             {
-                echo "<script>alert('Datos Modificados correctamente')</script>
-                  <script>window.location='../$base_perfil'</script>";
+                header("Location: modifyUser?msgModify=true");
             }
             else
             {
-                echo "<script>alert('Se ha producido un error al modificar datos, Favor contactar a administrador')</script>
-                  <script>window.location='../$base_perfil'</script>";
+                header("Location: modifyUser?msgModify=false");
             }
         }
     }

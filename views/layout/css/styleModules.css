@@ -167,9 +167,46 @@ tr,td
     text-align: center;
 }
 
-#formReports .dateHasta
+#msg
 {
+    width: 250px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 20em;
+    margin-top: 2em;
+    display: none;
+    text-shadow: 0 1px black;
+    color: white;
+    background: rgba(208, 46, 16, 0.9);
 
+}
+#msgVisita
+{
+    width: 250px;
+    text-align: center;
+    border-radius: 2px;
+    margin:0 15em;
+
+    bottom: 1em;
+    position: absolute;
+    display: none;
+    text-shadow: 0 1px black;
+    color: white;
+    background: rgba(208, 46, 16, 0.9);
+}
+
+#msgGuardia
+{
+    width: 200px;
+    text-align: center;
+    border-radius: 2px;
+    margin-left: 1em;
+    position: absolute;
+    bottom: -3em;
+    display: none;
+    text-shadow: 0 1px black;
+    color: white;
+    background: rgba(208, 46, 16, 0.9);
 }
 
 #modifyUserOperDoc

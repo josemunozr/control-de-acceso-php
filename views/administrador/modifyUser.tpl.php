@@ -53,6 +53,15 @@
         </div>
 
         <input type="submit" value="Enviar" />
+        <div id="msg"
+        <?php if($_GET["msgModify"] == "true"){?>
+            <span style="display: block">Datos Modificados correctamente</span>
+        <?php }else{?>
+            <span style="display: block">Error al modificar, validar datos ingresados</span>
+
+        <?php }?>
+
+        </div>
 
     </form>
 </section>
