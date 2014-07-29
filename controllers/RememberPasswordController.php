@@ -4,12 +4,16 @@ class RememberPasswordController extends BaseController {
 
     protected   $user;
     protected   $correo;
+    protected  $pass;
 
     protected $model;
+    protected $modelGetData;
 
     public function __construct()
     {
         $this->model = $this->loadModels('rememberPass');
+        $this->modelGetData = $this->loadModels('getDatos');
+
         $this->user = $_POST['usuario'];
         $this->correo = $_POST['correo'];
 
@@ -21,11 +25,14 @@ class RememberPasswordController extends BaseController {
         $correo = $this->correo;
 
 
-        $validateUser = $this->model->validateUser($user);
 
+        $validateUser = $this->model->validateUser($user);
         $getCorreo = $this->model->getCorreo($user);
         $validateCorreo = $this->model->validateCorreo($correo);
 
+        $this->pass = $this->modelGetData->getPassUser($user);
+
+        $passUser = $this->pass;
 
 
 
@@ -37,14 +44,15 @@ class RememberPasswordController extends BaseController {
 
                 $destino = $getCorreo['correo'];
                 $asunto = $this->getAsunto();
-                $mensaje = $this->getMensaje();
+                $mensaje = $this->getMensaje($passUser["pwd"]);
                 $desde = "FROM: " . "dcaccesscontroll";
 
                 $correo = mail($destino,$asunto,$mensaje,$desde) ;
 
                 if($correo == true)
                 {
-                    echo "Se ha enviado sus credenciales al correo indicado: " . $destino;
+                    /*echo "Se ha enviado sus credenciales al correo indicado: " . $destino;*/
+                    header("Location: index.php?msgRememberPass=true");
                 }
                 else
                 {
@@ -62,8 +70,7 @@ class RememberPasswordController extends BaseController {
         }
         else
         {
-            echo "<script>alert('Usuario Ingresado No existe')</script>
-                  <script>window.location='index.php'</script>";
+            header("Location: index.php?errorUser=true");
         }
 
 
@@ -73,13 +80,13 @@ class RememberPasswordController extends BaseController {
 
     public function getAsunto()
     {
-        $asunto = "Validación recordar correo";
+        $asunto = "Validación y recuperación de contraseña";
         return $asunto;
     }
 
-    public function getMensaje()
+    public function getMensaje($pass)
     {
-        $mensaje = "Este es un correo enviando donde se enviara su contraseña de acceso";
+        $mensaje = "Su contraseña de acceso es $pass ";
         return $mensaje;
     }
 

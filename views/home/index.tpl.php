@@ -42,4 +42,13 @@
 
         <?php }?>
     </div>
+
+    <div id="msgRememberPass"
+
+        <?php if($_GET["msgRememberPass"] == "true"){?>
+            <span style="display: block">Se ha enviado las credenciales a su correo</span>
+
+        <?php }?>
+
+    </div>
 </div>

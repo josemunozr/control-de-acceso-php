@@ -93,20 +93,14 @@ function addUser(){
 function validacionRut(){
 		
 		// validacion rut AccesRequest
-	$('.item_inputVisitantes #rutUsuario')
+	$('.item_inputVisitantes .rutUsuario')
 	.Rut({
-		format_on: 'keyup',
-		on_error: function(){
-			alert("rut Invalido");
-		}
+		format_on: 'keyup'
 	});
 		// validacion rut otherMethod
 	$('.item_rutUsuario #rutUsuario')
 	.Rut({
-		format_on: 'keyup',
-		on_error: function(){
-			alert("rut Invalido");
-		}
+		format_on: 'keyup'
 	});
 		// format Rut Company
 	/*$('.item_rutEmpresa #rutEmpresa')
@@ -116,10 +110,7 @@ function validacionRut(){
 */
     $('.modified_rutUsuario #rutUsuario')
      .Rut({
-            format_on: 'keyup',
-            on_error: function(){
-                alert("rut Invalido");
-            }
+            format_on: 'keyup'
      });
 
 }

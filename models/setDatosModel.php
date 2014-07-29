@@ -22,7 +22,6 @@ class setDatosModel extends Model {
                     ':tipoPerfil' => $tipoPerfil,
                     ':codEmp' => $codEmp,
                     ':correo' => $correo
-
                 ));
 
 
@@ -39,13 +38,14 @@ class setDatosModel extends Model {
 
 
         $sql_agendamiento = $this->_db->prepare("INSERT INTO agendamiento(cod_emp, cod_UsuSoli, motivo, fecha, hora, estado)
-                                                    VALUES (:rutEmp, :rutSolicitante,:motivo, :fecha,:hora, NULL)")
+                                                    VALUES (:rutEmp, :rutSolicitante,:motivo, :fecha,:hora, :estado)")
                            ->execute(array(
                                     ':rutEmp' => $rutEmp,
                                     ':rutSolicitante' => $RutSolicitante,
                                     ':motivo' => $motivo,
                                     ':fecha' => $fecha,
-                                    ':hora' => $hora
+                                    ':hora' => $hora,
+                                    ':estado' => 'agendado'
                                 ));
 
            // var_dump($sql_agendamiento);

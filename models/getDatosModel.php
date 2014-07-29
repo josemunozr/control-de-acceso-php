@@ -71,4 +71,14 @@ class getDatosModel extends Model {
     }
 
 
+    public function getPassUser($usuario)
+    {
+       $sql =  $this->_db->query("SELECT pwd
+                          FROM usuario
+                          WHERE cod_usu = '$usuario'");
+
+        return $sql->fetch();
+
+    }
+
 }
